@@ -1,0 +1,96 @@
+﻿@page
+@model FreshFarmMarket.Pages.LoginModel
+@inject IConfiguration configuration
+@{
+    var siteKey = configuration["ReCaptchaSettings:SiteKey"];
+}
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Login</h1>
+            <form id="loginForm" method="post">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="LModel.Email">Email Address</label>
+                    <input type="text" asp-for="LModel.Email" class="form-control" />
+                    <span asp-validation-for="LModel.Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 position-relative">
+                    <label class="form-label" asp-for="LModel.Password">Password</label>
+                    <div class="input-group">
+                        <input type="password" asp-for="LModel.Password" class="form-control" id="passwordInput" />
+                        <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                            <i class="fas fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="LModel.Password" class="text-danger"></span>
+                </div>
+
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
+
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary" onclick="executeRecaptcha();">Login</button>
+                </div>
+
+                @if (TempData["RemainingAttempts"] != null)
+                {
+                    <div class="alert alert-warning">
+                        @TempData["RemainingAttempts"] remaining attempts left.
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["Error"]
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=@siteKey"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        grecaptcha.ready(function () {
+            console.log("reCAPTCHA is ready.");
+        });
+    });
+
+    function executeRecaptcha() {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('@siteKey', { action: 'login' }).then(function (token) {
+                console.log("Generated reCAPTCHA token:", token);
+                if (token) {
+                    // Set the reCAPTCHA token in the hidden input field
+                    document.getElementById('recaptchaToken').value = token;
+                    console.log("Token set in hidden field:", document.getElementById('recaptchaToken').value);
+
+                    // Submit the form after setting the token
+                    document.getElementById("loginForm").submit();
+                } else {
+                    console.log("No token generated.");
+                    // Optionally show an error message or handle the failure case
+                }
+            }).catch(function (error) {
+                console.error("reCAPTCHA error:", error);
+            });
+        });
+    }
+
+    // Password visibility toggle
+    document.getElementById("togglePassword").addEventListener("click", () => {
+        const passwordInput = document.getElementById("passwordInput");
+        const eyeIcon = document.getElementById("eyeIcon");
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+        eyeIcon.classList.toggle("fa-eye");
+        eyeIcon.classList.toggle("fa-eye-slash");
+    });
+</script>

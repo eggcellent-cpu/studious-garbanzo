@@ -1,0 +1,217 @@
+﻿@page
+@model FreshFarmMarket.Pages.RegisterModel
+@{
+}
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <h1 class="mb-3">Membership Registration Form </h1>
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Email">Email Address</label>
+                    <input type="text" asp-for="RModel.Email" class="form-control" />
+                    <span asp-validation-for="RModel.Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 position-relative">
+                    <label class="form-label" asp-for="RModel.Password">Password</label>
+                    <div class="input-group">
+                        <input type="password" asp-for="RModel.Password" class="form-control" id="passwordInput" oninput="validatePassword()" />
+                        <button type="button" class="btn btn-outline-secondary" id="togglePassword" tabindex="-1">
+                            <i class="fas fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="RModel.Password" class="text-danger"></span>
+                    <span id="password-feedback" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 position-relative">
+                    <label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
+                    <div class="input-group">
+                        <input type="password" asp-for="RModel.ConfirmPassword" class="form-control" id="confirmPasswordInput" />
+                        <button type="button" class="btn btn-outline-secondary" id="toggleConfirmPassword" tabindex="-1">
+                            <i class="fas fa-eye" id="confirmEyeIcon"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="RModel.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.FullName">Full Name</label>
+                    <input type="text" asp-for="RModel.FullName" class="form-control" />
+                    <span asp-validation-for="RModel.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Gender">Gender</label>
+                    <select asp-for="RModel.Gender" class="form-select">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="RModel.Gender" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.MobileNo">Mobile Number</label>
+                    <input type="text" asp-for="RModel.MobileNo" class="form-control" />
+                    <span asp-validation-for="RModel.MobileNo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.CreditCardNo">Credit Card Number</label>
+                    <input type="text" asp-for="RModel.CreditCardNo" class="form-control" />
+                    <span asp-validation-for="RModel.CreditCardNo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.DeliveryAddress">Delivery Address</label>
+                    <textarea asp-for="RModel.DeliveryAddress" class="form-control"></textarea>
+                    <span asp-validation-for="RModel.DeliveryAddress" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Photo">Profile Photo</label>
+                    <input type="file" asp-for="RModel.Photo" class="form-control" />
+                    <span asp-validation-for="RModel.Photo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.AboutMe">About Me</label>
+                    <textarea asp-for="RModel.AboutMe" class="form-control"></textarea>
+                    <span asp-validation-for="RModel.AboutMe" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .password-feedback-very-weak {
+        color: red;
+        font-weight: bold;
+    }
+
+    .password-feedback-weak {
+        color: orange;
+        font-weight: bold;
+    }
+
+    .password-feedback-medium {
+        color: #cc9900; /* Darker yellow for better visibility */
+        font-weight: bold;
+    }
+
+    .password-feedback-strong {
+        color: blue;
+        font-weight: bold;
+    }
+
+    .password-feedback-excellent {
+        color: green;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    // Toggle Password Visibility
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("passwordInput");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    togglePassword.addEventListener("click", () => {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Toggle the eye icon
+        eyeIcon.classList.toggle("bi-eye");
+        eyeIcon.classList.toggle("bi-eye-slash");
+    });
+
+    // Toggle Confirm Password Visibility
+    const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
+    const confirmPasswordInput = document.getElementById("confirmPasswordInput");
+    const confirmEyeIcon = document.getElementById("confirmEyeIcon");
+
+    toggleConfirmPassword.addEventListener("click", () => {
+        const type = confirmPasswordInput.getAttribute("type") === "password" ? "text" : "password";
+        confirmPasswordInput.setAttribute("type", type);
+
+        // Toggle the eye icon
+        confirmEyeIcon.classList.toggle("bi-eye");
+        confirmEyeIcon.classList.toggle("bi-eye-slash");
+    });
+</script>
+
+
+
+<script>
+    function validatePassword() {
+        const password = document.getElementById("password").value;
+        const feedback = document.getElementById("password-feedback");
+
+        let score = 0;
+
+        // Check for minimum length
+        if (password.length >= 8) score++;
+
+        // Check for lowercase letters
+        if (/[a-z]/.test(password)) score++;
+
+        // Check for uppercase letters
+        if (/[A-Z]/.test(password)) score++;
+
+        // Check for numbers
+        if (/\d/.test(password)) score++;
+
+        // Check for special characters
+        if (/[!@@#$%^&*(),.?":{}|<>]/.test(password)) score++;
+
+        // Define status and class based on score
+        let status = "";
+        let feedbackClass = "";
+
+        switch (score) {
+            case 1:
+                status = "Very Weak";
+                feedbackClass = "password-feedback-very-weak";
+                break;
+            case 2:
+                status = "Weak";
+                feedbackClass = "password-feedback-weak";
+                break;
+            case 3:
+                status = "Medium";
+                feedbackClass = "password-feedback-medium";
+                break;
+            case 4:
+                status = "Strong";
+                feedbackClass = "password-feedback-strong";
+                break;
+            case 5:
+                status = "Excellent";
+                feedbackClass = "password-feedback-excellent";
+                break;
+            default:
+                status = "Very Weak";
+                feedbackClass = "password-feedback-very-weak";
+                break;
+        }
+
+        // Reset the feedback classes and apply the new one
+        feedback.className = feedbackClass;
+        feedback.textContent = "Status: " + status;
+    }
+</script>
+
