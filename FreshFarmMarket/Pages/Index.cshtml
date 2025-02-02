@@ -1,10 +1,26 @@
 ﻿@page
 @model IndexModel
+@using Microsoft.AspNetCore.Identity
+@using FreshFarmMarket.Model
+@inject SignInManager<CustomIdentityUser> SignInManager
+@inject UserManager<CustomIdentityUser> UserManager
+
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = await UserManager.GetUserAsync(User); 
+        <p>You are logged in as: @currentUser?.FullName</p>
+        <p>Welcome to FreshFarmMarket, @currentUser?.FullName.</p>
+        <p>Your email is, @currentUser?.Email.</p>
+    }
+    else
+    {
+        <p>You are **not** signed in. <a asp-page="/Login">Login here</a></p>
+    }
 </div>

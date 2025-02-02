@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1mjDtvAndfg=",
+  "dgSpecHash": "ffeO5Pt4L4s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\timel\\source\\repos\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
+  "projectFilePath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timel\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\timel\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",

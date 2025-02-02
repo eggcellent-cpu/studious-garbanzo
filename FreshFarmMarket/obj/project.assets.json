@@ -5379,11 +5379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timel\\source\\repos\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
+      "projectUniqueName": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
       "projectName": "FreshFarmMarket",
-      "projectPath": "C:\\Users\\timel\\source\\repos\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
+      "projectPath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
       "packagesPath": "C:\\Users\\timel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timel\\source\\repos\\FreshFarmMarket\\FreshFarmMarket\\obj\\",
+      "outputPath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\timel\\AppData\\Roaming\\NuGet\\NuGet.Config",

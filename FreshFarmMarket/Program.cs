@@ -11,11 +11,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddScoped<ReCaptchaService>();
 builder.Services.AddHttpClient();
 
-builder.Services.AddIdentityCore<CustomIdentityUser>()
-    .AddEntityFrameworkStores<MyAuthDbContext>()
-    .AddSignInManager()
-    .AddDefaultTokenProviders();
-
 // Configure Database and Identity
 builder.Services.AddDbContext<MyAuthDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyAuthConnectionString")));
@@ -23,17 +18,19 @@ builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<MyAuthDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddSession();
+
 // Configure Authentication and Cookie settings
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie("MyCookieAuth", options =>
+    .AddCookie(options =>
     {
         options.LoginPath = "/Login";
         options.AccessDeniedPath = "/AccessDenied";
-        options.Cookie.Name = "MyCookieAuth";
+        options.Cookie.Name = "MyAuthCookie";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         options.SlidingExpiration = true;
-        options.Cookie.SecurePolicy = builder.Environment.IsProduction() ? CookieSecurePolicy.Always : CookieSecurePolicy.SameAsRequest;
     });
+
 
 // Configure Authorization and Identity options
 builder.Services.AddAuthorization(options =>
@@ -58,6 +55,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 });
+
 
 var app = builder.Build();
 

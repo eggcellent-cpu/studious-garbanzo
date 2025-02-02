@@ -105,7 +105,7 @@ namespace FreshFarmMarket.Pages
                     user.PhotoPath = "/uploads/" + uniqueFileName; // Store relative file path
                 }
 
-                // Create user in Identity
+                // Create user in Identity (this hashes the password internally)
                 var result = await userManager.CreateAsync(user, RModel.Password);
 
                 if (result.Succeeded)
@@ -117,7 +117,7 @@ namespace FreshFarmMarket.Pages
                     {
                         UserID = Guid.NewGuid(),
                         FullName = RModel.FullName,
-                        Password = RModel.Password,
+                        Password = user.PasswordHash, // Store the hashed password from Identity
                         Email = RModel.Email,
                         CreditCardNo = RModel.CreditCardNo, // Store plain text for database (if required)
                         Gender = RModel.Gender,
@@ -203,6 +203,5 @@ namespace FreshFarmMarket.Pages
                 }
             }
         }
-
     }
 }
