@@ -69,10 +69,12 @@ using (var scope = app.Services.CreateScope())
 // Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Error/500");
     app.UseStatusCodePagesWithReExecute("/Error/{0}");
     app.UseHsts();
 }
+
+app.UseMiddleware<CustomErrorHandlingMiddleware>();
 
 app.UseSession();
 

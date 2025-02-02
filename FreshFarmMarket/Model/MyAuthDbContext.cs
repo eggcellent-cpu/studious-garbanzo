@@ -1,4 +1,4 @@
-﻿using FreshFarmMarket.Model;
+ï»¿using FreshFarmMarket.Model;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,5 +31,6 @@ namespace FreshFarmMarket.Model
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
     }
 }

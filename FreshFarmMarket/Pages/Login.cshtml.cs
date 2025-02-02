@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 using FreshFarmMarket.Middleware;
 using Ganss.Xss;
+using FreshFarmMarket.Services;
 
 namespace FreshFarmMarket.Pages
 {
@@ -23,13 +24,14 @@ namespace FreshFarmMarket.Pages
         private readonly string _recaptchaVerificationUrl;
         private readonly SignInManager<CustomIdentityUser> _signInManager;
         private readonly UserManager<CustomIdentityUser> _userManager;
+        private readonly AuditLogService _auditLogService;
 
         [BindProperty]
         public Login LModel { get; set; }
 
         public int RemainingAttempts { get; private set; }
 
-        public LoginModel(MyAuthDbContext dbContext, ILogger<LoginModel> logger, ReCaptchaService reCaptchaService, IConfiguration configuration, SignInManager<CustomIdentityUser> signInManager, UserManager<CustomIdentityUser> userManager)
+        public LoginModel(MyAuthDbContext dbContext, ILogger<LoginModel> logger, ReCaptchaService reCaptchaService, IConfiguration configuration, SignInManager<CustomIdentityUser> signInManager, UserManager<CustomIdentityUser> userManager, AuditLogService auditLogService)
         {
             _dbContext = dbContext;
             _logger = logger;
@@ -38,6 +40,7 @@ namespace FreshFarmMarket.Pages
             _recaptchaVerificationUrl = configuration["ReCaptchaSettings:VerificationUrl"];
             _signInManager = signInManager;
             _userManager = userManager;
+            _auditLogService = auditLogService;
         }
 
         public IActionResult OnGet()
@@ -136,6 +139,12 @@ namespace FreshFarmMarket.Pages
                 HttpContext.Session.SetString("SessionExpireTime", sessionExpireTime.ToString());
 
                 _logger.LogInformation("User {Email} logged in successfully", LModel.Email);
+                
+                await _auditLogService.LogActivityAsync(
+                    user.Id,
+                    "Login",
+                    $"Successful login from IP: {HttpContext.Connection.RemoteIpAddress}"
+                );
 
                 return RedirectToPage("/Index");
             }
