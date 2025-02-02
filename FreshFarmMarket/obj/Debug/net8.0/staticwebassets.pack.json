@@ -277,6 +277,10 @@
       "PackagePath": "staticwebassets\\uploads\\aada76ef-70de-463d-b5c0-4de72eecff96.jpg"
     },
     {
+      "Id": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\wwwroot\\uploads\\ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FreshFarmMarket.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

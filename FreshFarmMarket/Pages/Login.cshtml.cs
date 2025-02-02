@@ -50,19 +50,29 @@ namespace FreshFarmMarket.Pages
 
             var sessionAuthToken = HttpContext.Session.GetString("AuthToken");
             var cookieAuthToken = Request.Cookies["AuthToken"];
+            var sessionExpireTime = HttpContext.Session.GetString("SessionExpireTime");
 
-            if (string.IsNullOrEmpty(sessionAuthToken) ||
-                string.IsNullOrEmpty(cookieAuthToken) ||
-                sessionAuthToken != cookieAuthToken)
+            // Check if session timeout has occurred
+            if (string.IsNullOrEmpty(sessionExpireTime) || DateTime.UtcNow > DateTime.Parse(sessionExpireTime))
             {
-                // Clear session and cookies if the tokens are mismatched or missing
                 HttpContext.Session.Clear();
                 Response.Cookies.Delete("AuthToken");
-
-                // Redirect to login page
-                if (!HttpContext.Request.Path.Value.EndsWith("Login", StringComparison.OrdinalIgnoreCase))
+                Response.Cookies.Delete("MyCookieAuth");
+                if (!Request.Path.Value.EndsWith("/Login", StringComparison.OrdinalIgnoreCase))
                 {
-                    return RedirectToPage("Login");
+                    return RedirectToPage("/Login");
+                }
+            }
+
+            if (string.IsNullOrEmpty(sessionAuthToken) || string.IsNullOrEmpty(cookieAuthToken) || sessionAuthToken != cookieAuthToken)
+            {
+                HttpContext.Session.Clear();
+                Response.Cookies.Delete("AuthToken");
+                Response.Cookies.Delete("MyCookieAuth");
+
+                if (!Request.Path.Value.EndsWith("/Login", StringComparison.OrdinalIgnoreCase))
+                {
+                    return RedirectToPage("/Login");
                 }
             }
 
@@ -114,37 +124,42 @@ namespace FreshFarmMarket.Pages
             var result = await _signInManager.PasswordSignInAsync(user, LModel.Password, false, lockoutOnFailure: true);
             if (result.Succeeded)
             {
-                _logger.LogInformation($"User Identity After Login: {HttpContext.User.Identity?.Name}");
-                Console.WriteLine($"User Is Authenticated After Login: {HttpContext.User.Identity?.IsAuthenticated}");
-
-                // Generate a random AuthToken
                 var authToken = Guid.NewGuid().ToString();
 
-                // Store AuthToken in session
-                HttpContext.Session.SetString("AuthToken", authToken);
+                // Store session token in database for tracking multiple logins
+                user.SessionToken = authToken;
+                await _dbContext.SaveChangesAsync();
 
-                // Set AuthToken as a secure cookie
+                HttpContext.Session.Clear(); // Prevent session fixation
+
+                HttpContext.Session.SetString("AuthToken", authToken);
+                HttpContext.Session.SetString("CurrentUser", user.Email);
+                HttpContext.Session.SetString("SessionExpireTime", DateTime.UtcNow.AddSeconds(30).ToString());
+
                 Response.Cookies.Append("AuthToken", authToken, new CookieOptions
                 {
                     HttpOnly = true,
                     Secure = true,
                     SameSite = SameSiteMode.Strict,
-                    Expires = DateTime.UtcNow.AddHours(1)
+                    Expires = DateTime.UtcNow.AddSeconds(30)
                 });
 
-                // Store user email in session
-                HttpContext.Session.SetString("CurrentUser", user.Email);
+                Response.Cookies.Append("MyCookieAuth", authToken, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = false,  // Set to false for local development or true for production
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddSeconds(30)
+                });
 
-                var sessionExpireTime = DateTime.UtcNow.AddMinutes(30);
-                HttpContext.Session.SetString("SessionExpireTime", sessionExpireTime.ToString());
+                HttpContext.Session.SetString("CurrentUser", user.Email);
+                HttpContext.Session.SetString("SessionExpireTime", DateTime.UtcNow.AddMinutes(30).ToString());
+
 
                 _logger.LogInformation("User {Email} logged in successfully", LModel.Email);
-                
-                await _auditLogService.LogActivityAsync(
-                    user.Id,
-                    "Login",
-                    $"Successful login from IP: {HttpContext.Connection.RemoteIpAddress}"
-                );
+
+                await _auditLogService.LogActivityAsync(user.Id, "Login", $"Successful login from IP: {HttpContext.Connection.RemoteIpAddress}");
+
 
                 return RedirectToPage("/Index");
             }

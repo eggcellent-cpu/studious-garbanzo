@@ -14,7 +14,7 @@
 
     @if (SignInManager.IsSignedIn(User))
     {
-        var currentUser = await UserManager.GetUserAsync(User); 
+        var currentUser = await UserManager.GetUserAsync(User);
         <p>You are logged in as: @currentUser?.FullName</p>
         <p>Welcome to FreshFarmMarket, @currentUser?.FullName.</p>
         <p>Your email is, @currentUser?.Email.</p>
@@ -24,3 +24,54 @@
         <p>You are **not** signed in. <a asp-page="/Login">Login here</a></p>
     }
 </div>
+
+<!-- Modal -->
+<div class="modal" id="sessionExpireModal" tabindex="-1" role="dialog" aria-labelledby="sessionExpireModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sessionExpireModalLabel">Your session is about to expire</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your session will expire in <span id="countdown"></span> seconds! Do you want to continue your session or log out?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="continueSessionButton">Continue Session</button>
+                <button type="button" class="btn btn-danger" id="logoutButton">Log Out</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var countdownTime = 10; // Countdown time in seconds
+    var countdownElement = document.getElementById('countdown');
+    var sessionExpireModal = new bootstrap.Modal(document.getElementById('sessionExpireModal'));
+
+    // Show the modal and start countdown
+    setTimeout(function () {
+        sessionExpireModal.show();
+        var countdownInterval = setInterval(function () {
+            countdownElement.textContent = countdownTime;
+            countdownTime--;
+            if (countdownTime < 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '/Login'; // Redirect to login after countdown
+            }
+        }, 1000);
+    }, 30000); // Show modal after 30 minutes
+
+    // Continue session on button click
+    document.getElementById('continueSessionButton').addEventListener('click', function () {
+        sessionExpireModal.hide();
+        // Reset session expire time in backend, or keep session alive here
+    });
+
+    // Log out on button click
+    document.getElementById('logoutButton').addEventListener('click', function () {
+        window.location.href = '/Logout'; // Redirect to logout page or log out directly
+    });
+</script>

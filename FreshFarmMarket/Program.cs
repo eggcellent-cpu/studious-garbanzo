@@ -1,5 +1,6 @@
 using FreshFarmMarket.Middleware;
 using FreshFarmMarket.Model;
+using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ReCaptchaService>();
+builder.Services.AddScoped<AuditLogService>();
 builder.Services.AddHttpClient();
 
 // Configure Database and Identity
@@ -26,7 +28,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Login";
         options.AccessDeniedPath = "/AccessDenied";
-        options.Cookie.Name = "MyAuthCookie";
+        options.Cookie.Name = "MyCookieAuth";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         options.SlidingExpiration = true;
     });
@@ -50,7 +52,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.IdleTimeout = TimeSpan.FromSeconds(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
@@ -77,9 +79,6 @@ if (!app.Environment.IsDevelopment())
 app.UseMiddleware<CustomErrorHandlingMiddleware>();
 
 app.UseSession();
-
-//// Add custom session timeout middleware
-//app.UseMiddleware<SessionTimeoutMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

@@ -11,6 +11,8 @@ namespace FreshFarmMarket.Model
         public string DeliveryAddress { get; set; } = string.Empty; // Delivery Address
         public string AboutMe { get; set; } = string.Empty; // About Me section
         public string PhotoPath { get; set; } // JPG photo as a byte array (or a file path reference)
+
+        public string? SessionToken { get; set; }
     }
 
 }

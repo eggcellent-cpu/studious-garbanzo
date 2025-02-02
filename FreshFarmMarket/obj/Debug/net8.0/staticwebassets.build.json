@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wdZtw6URaNRx86x8bq56LwCBJy29ADjy9W2MJwvGkeQ=",
+  "Hash": "HKP+XyNoPZJC6hKpt5YKwuZR3DuNRkA1kNLk2WYLopA=",
   "Source": "FreshFarmMarket",
   "BasePath": "_content/FreshFarmMarket",
   "Mode": "Default",
@@ -1345,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\aada76ef-70de-463d-b5c0-4de72eecff96.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\wwwroot\\uploads\\ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg",
+      "SourceId": "FreshFarmMarket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\wwwroot\\",
+      "BasePath": "_content/FreshFarmMarket",
+      "RelativePath": "uploads/ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg"
     }
   ]
 }
