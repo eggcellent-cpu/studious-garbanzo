@@ -1,4 +1,4 @@
-ï»¿using FreshFarmMarket.Model;
+using FreshFarmMarket.Model;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
