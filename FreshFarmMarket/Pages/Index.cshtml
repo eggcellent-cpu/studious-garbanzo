@@ -2,12 +2,18 @@
 @model IndexModel
 @using Microsoft.AspNetCore.Identity
 @using FreshFarmMarket.Model
+@using FreshFarmMarket.Services
 @inject SignInManager<CustomIdentityUser> SignInManager
 @inject UserManager<CustomIdentityUser> UserManager
+@inject EncryptionService EncryptionService
 
 @{
     ViewData["Title"] = "Home Page";
 }
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
@@ -18,25 +24,28 @@
         <p>You are logged in as: @currentUser?.FullName</p>
         <p>Welcome to FreshFarmMarket, @currentUser?.FullName.</p>
         <p>Your email is, @currentUser?.Email.</p>
+
+        <!-- Decrypt and display sensitive data -->
+        <p>Your phone number is: @EncryptionService.Decrypt(currentUser?.PhoneNumber)</p>
+        <p>Your delivery address is: @EncryptionService.Decrypt(currentUser?.DeliveryAddress)</p>
+        <p>Your credit card number is: @EncryptionService.Decrypt(currentUser?.CreditCardNo)</p>
     }
     else
     {
-        <p>You are **not** signed in. <a asp-page="/Login">Login here</a></p>
+        <p>You are <strong>not</strong> signed in. <a asp-page="/Login">Login here</a></p>
     }
 </div>
 
 <!-- Modal -->
-<div class="modal" id="sessionExpireModal" tabindex="-1" role="dialog" aria-labelledby="sessionExpireModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="sessionExpireModal" tabindex="-1" aria-labelledby="sessionExpireModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="sessionExpireModalLabel">Your session is about to expire</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Your session will expire in <span id="countdown"></span> seconds! Do you want to continue your session or log out?
+                Your session will expire in <span id="countdown">10</span> seconds! Do you want to continue your session or log out?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="continueSessionButton">Continue Session</button>
@@ -47,31 +56,36 @@
 </div>
 
 <script>
-    var countdownTime = 10; // Countdown time in seconds
-    var countdownElement = document.getElementById('countdown');
-    var sessionExpireModal = new bootstrap.Modal(document.getElementById('sessionExpireModal'));
+    document.addEventListener("DOMContentLoaded", function () {
+        var countdownTime = 10;
+        var countdownElement = document.getElementById("countdown");
+        var sessionExpireModal = new bootstrap.Modal(document.getElementById("sessionExpireModal"));
 
-    // Show the modal and start countdown
-    setTimeout(function () {
-        sessionExpireModal.show();
-        var countdownInterval = setInterval(function () {
-            countdownElement.textContent = countdownTime;
-            countdownTime--;
-            if (countdownTime < 0) {
-                clearInterval(countdownInterval);
-                window.location.href = '/Login'; // Redirect to login after countdown
-            }
-        }, 1000);
-    }, 30000); // Show modal after 30 minutes
+        // Show modal after 30 seconds
+        setTimeout(function () {
+            sessionExpireModal.show();
 
-    // Continue session on button click
-    document.getElementById('continueSessionButton').addEventListener('click', function () {
-        sessionExpireModal.hide();
-        // Reset session expire time in backend, or keep session alive here
-    });
+            var countdownInterval = setInterval(function () {
+                countdownElement.textContent = countdownTime;
+                countdownTime--;
 
-    // Log out on button click
-    document.getElementById('logoutButton').addEventListener('click', function () {
-        window.location.href = '/Logout'; // Redirect to logout page or log out directly
+                if (countdownTime < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = '/Login'; // Redirect to login after countdown
+                }
+            }, 1000);
+        }, 30000); // Show modal after 30 seconds
+
+        // Continue session on button click
+        document.getElementById("continueSessionButton").addEventListener("click", function () {
+            var modalInstance = bootstrap.Modal.getInstance(document.getElementById("sessionExpireModal"));
+            modalInstance.hide();
+            // Reset session timeout here if needed
+        });
+
+        // Log out on button click
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            window.location.href = '/Logout'; // Redirect to logout page
+        });
     });
 </script>

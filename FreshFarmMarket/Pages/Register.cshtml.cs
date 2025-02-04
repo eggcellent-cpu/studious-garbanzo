@@ -8,6 +8,7 @@ using System.Text;
 using FreshFarmMarket.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
+using FreshFarmMarket.Services.EncryptionService
 
 namespace FreshFarmMarket.Pages
 {
@@ -142,66 +143,6 @@ namespace FreshFarmMarket.Pages
             }
 
             return Page();
-        }
-
-        private string Encrypt(string data)
-        {
-            using (var aes = Aes.Create())
-            {
-                aes.GenerateKey();
-                aes.GenerateIV();
-
-                byte[] key = aes.Key;
-                byte[] iv = aes.IV;
-
-                using (var encryptor = aes.CreateEncryptor(key, iv))
-                {
-                    using (var ms = new MemoryStream())
-                    {
-                        using (var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
-                        {
-                            using (var sw = new StreamWriter(cs))
-                            {
-                                sw.Write(data);
-                            }
-                        }
-
-                        byte[] encryptedData = ms.ToArray();
-                        string encryptedText = Convert.ToBase64String(encryptedData);
-                        string keyIvData = Convert.ToBase64String(key) + ":" + Convert.ToBase64String(iv);
-                        return $"{keyIvData}:{encryptedText}";
-                    }
-                }
-            }
-        }
-
-        private string Decrypt(string encryptedDataWithKeyIv)
-        {
-            string[] parts = encryptedDataWithKeyIv.Split(':');
-            string base64Key = parts[0];
-            string base64Iv = parts[1];
-            string encryptedText = parts[2];
-
-            byte[] key = Convert.FromBase64String(base64Key);
-            byte[] iv = Convert.FromBase64String(base64Iv);
-            byte[] encryptedData = Convert.FromBase64String(encryptedText);
-
-            using (var aes = Aes.Create())
-            {
-                using (var decryptor = aes.CreateDecryptor(key, iv))
-                {
-                    using (var ms = new MemoryStream(encryptedData))
-                    {
-                        using (var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
-                        {
-                            using (var sr = new StreamReader(cs))
-                            {
-                                return sr.ReadToEnd();
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

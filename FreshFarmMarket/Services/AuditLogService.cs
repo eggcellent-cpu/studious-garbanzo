@@ -19,18 +19,33 @@ namespace FreshFarmMarket.Services
 
         public async Task LogActivityAsync(string userId, string activity, string details)
         {
-            var auditLog = new AuditLog
+            try
             {
-                UserId = userId,
-                Activity = activity,
-                Details = details,
-                Timestamp = DateTime.UtcNow,
-                IpAddress = "", // Add IP address capture logic
-                UserAgent = "" // Add User Agent capture logic
-            };
+                var auditLog = new AuditLog
+                {
+                    UserId = userId,
+                    Activity = activity,
+                    Details = details,
+                    Timestamp = DateTime.UtcNow,
+                    IpAddress = "",
+                    UserAgent = ""
+                };
 
-            _context.AuditLogs.Add(auditLog);
-            await _context.SaveChangesAsync();
+                Console.WriteLine($"Adding audit log for user: {userId}");
+                _logger.LogInformation($"Adding audit log for user: {userId}");
+
+                _context.AuditLogs.Add(auditLog);
+                await _context.SaveChangesAsync();
+
+                Console.WriteLine("Audit log saved successfully.");
+                _logger.LogInformation("Audit log saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving audit log: {ex.Message}");
+                _logger.LogError($"Error saving audit log: {ex}");
+            }
         }
+
     }
 }

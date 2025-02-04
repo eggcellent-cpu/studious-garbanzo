@@ -39,14 +39,12 @@ namespace FreshFarmMarket.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IpAddress")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserAgent")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")

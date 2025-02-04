@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ReCaptchaService>();
 builder.Services.AddScoped<AuditLogService>();
+builder.Services.AddScoped<EncryptionService>();
 builder.Services.AddHttpClient();
 
 // Configure Database and Identity
@@ -56,6 +57,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    options.Cookie.SameSite = SameSiteMode.Strict;
 });
 
 

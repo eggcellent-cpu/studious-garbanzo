@@ -56,6 +56,7 @@ namespace FreshFarmMarket.Pages
             if (string.IsNullOrEmpty(sessionExpireTime) || DateTime.UtcNow > DateTime.Parse(sessionExpireTime))
             {
                 HttpContext.Session.Clear();
+                Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
                 Response.Cookies.Delete("AuthToken");
                 Response.Cookies.Delete("MyCookieAuth");
                 if (!Request.Path.Value.EndsWith("/Login", StringComparison.OrdinalIgnoreCase))
@@ -67,6 +68,7 @@ namespace FreshFarmMarket.Pages
             if (string.IsNullOrEmpty(sessionAuthToken) || string.IsNullOrEmpty(cookieAuthToken) || sessionAuthToken != cookieAuthToken)
             {
                 HttpContext.Session.Clear();
+                Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
                 Response.Cookies.Delete("AuthToken");
                 Response.Cookies.Delete("MyCookieAuth");
 

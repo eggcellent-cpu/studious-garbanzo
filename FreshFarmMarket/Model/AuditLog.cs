@@ -10,7 +10,7 @@ namespace FreshFarmMarket.Model
         public string Activity { get; set; }
         public string Details { get; set; }
         public DateTime Timestamp { get; set; }
-        public string IpAddress { get; set; }
-        public string UserAgent { get; set; }
+        public string? IpAddress { get; set; }
+        public string? UserAgent { get; set; }
     }
 }
