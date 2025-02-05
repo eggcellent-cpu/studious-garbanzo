@@ -2,13 +2,10 @@ using FreshFarmMarket.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 using FreshFarmMarket.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
-using FreshFarmMarket.Services.EncryptionService
+using FreshFarmMarket.Services;
 
 namespace FreshFarmMarket.Pages
 {
@@ -18,16 +15,20 @@ namespace FreshFarmMarket.Pages
         private SignInManager<CustomIdentityUser> signInManager { get; }
         private readonly ILogger<RegisterModel> _logger;
         private readonly MyAuthDbContext _dbContext;
+        private readonly EncryptionService _encryptionService;
+
 
         [BindProperty]
         public Register RModel { get; set; }
 
-        public RegisterModel(UserManager<CustomIdentityUser> userManager, SignInManager<CustomIdentityUser> signInManager, ILogger<RegisterModel> logger, MyAuthDbContext dbContext)
+        public RegisterModel(UserManager<CustomIdentityUser> userManager, SignInManager<CustomIdentityUser> signInManager, ILogger<RegisterModel> logger, MyAuthDbContext dbContext, EncryptionService encryptionService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             _logger = logger;
             _dbContext = dbContext;
+            _encryptionService = encryptionService;
+
         }
 
         public void OnGet()
@@ -73,17 +74,22 @@ namespace FreshFarmMarket.Pages
 
             if (ModelState.IsValid)
             {
+                // Encrypt sensitive data
+                string encryptedCreditCard = _encryptionService.Encrypt(RModel.CreditCardNo);
+                string encryptedPhoneNumber = _encryptionService.Encrypt(RModel.MobileNo);
+                string encryptedDeliveryAddress = _encryptionService.Encrypt(RModel.DeliveryAddress);
+
                 // Create a new User object
                 var user = new CustomIdentityUser
                 {
                     UserName = RModel.Email,
                     Email = RModel.Email,
-                    PhoneNumber = RModel.MobileNo,
+                    PhoneNumber = encryptedPhoneNumber,
                     FullName = RModel.FullName,
                     Gender = RModel.Gender,
-                    DeliveryAddress = RModel.DeliveryAddress,
+                    DeliveryAddress = encryptedDeliveryAddress,
                     AboutMe = RModel.AboutMe,
-                    CreditCardNo = Encrypt(RModel.CreditCardNo) // Store encrypted credit card number
+                    CreditCardNo = encryptedCreditCard // Store encrypted credit card number
                 };
 
                 // Handle photo upload
@@ -120,10 +126,10 @@ namespace FreshFarmMarket.Pages
                         FullName = RModel.FullName,
                         Password = user.PasswordHash, // Store the hashed password from Identity
                         Email = RModel.Email,
-                        CreditCardNo = RModel.CreditCardNo, // Store plain text for database (if required)
+                        CreditCardNo = encryptedCreditCard, // Store plain text for database (if required)
                         Gender = RModel.Gender,
-                        MobileNo = RModel.MobileNo,
-                        DeliveryAddress = RModel.DeliveryAddress,
+                        MobileNo = encryptedPhoneNumber,
+                        DeliveryAddress = encryptedDeliveryAddress,
                         AboutMe = RModel.AboutMe,
                         PhotoPath = user.PhotoPath // Store photo path
                     };

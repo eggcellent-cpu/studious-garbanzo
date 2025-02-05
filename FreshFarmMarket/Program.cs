@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ReCaptchaService>();
 builder.Services.AddScoped<AuditLogService>();
-builder.Services.AddScoped<EncryptionService>();
+builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddHttpClient();
 
 // Configure Database and Identity

@@ -3,6 +3,7 @@ using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace FreshFarmMarket.Pages
 {
@@ -10,30 +11,39 @@ namespace FreshFarmMarket.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly UserManager<CustomIdentityUser> _userManager;
+        private readonly MyAuthDbContext _dbContext;
+        private readonly EncryptionService _encryptionService;
 
-        public IndexModel(ILogger<IndexModel> logger, UserManager<CustomIdentityUser> userManager)
+        public IndexModel(ILogger<IndexModel> logger, UserManager<CustomIdentityUser> userManager, MyAuthDbContext dbContext, EncryptionService encryptionService)
         {
             _logger = logger;
             _userManager = userManager;
+            _dbContext = dbContext;
+            _encryptionService = encryptionService;
         }
 
-        public void OnGet()
-        {
+        public List<User> Users { get; set; } = new List<User>();
 
-        }
-
-        public async Task<IActionResult> OnGetDisplayCreditCardAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            var allUsers = await _dbContext.Users.ToListAsync();
+
+            // Decrypt sensitive fields before displaying
+            Users = allUsers.Select(user => new User
             {
-                return NotFound("User not found.");
-            }
+                UserID = user.UserID,
+                FullName = user.FullName,
+                Email = user.Email,
+                MobileNo = _encryptionService.Decrypt(user.MobileNo),
+                Gender = user.Gender,
+                DeliveryAddress = _encryptionService.Decrypt(user.DeliveryAddress),
+                CreditCardNo = _encryptionService.Decrypt(user.CreditCardNo),
+                AboutMe = user.AboutMe,
+                PhotoPath = user.PhotoPath,
+                Password = user.Password // If you need to hash passwords, don't decrypt this
+            }).ToList();
 
-            string decryptedCreditCard = EncryptionService.Decrypt(user.CreditCardNo);
-            ViewData["CreditCardNo"] = decryptedCreditCard; // Display on the homepage
             return Page();
         }
-
     }
 }
