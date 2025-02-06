@@ -37,6 +37,11 @@ namespace FreshFarmMarket.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page(); // Return the same page to show validation errors
+            }
+
             // Photo validation
             if (RModel.Photo == null || RModel.Photo.Length == 0)
             {
@@ -63,6 +68,18 @@ namespace FreshFarmMarket.Pages
                 {
                     ModelState.AddModelError("Photo", "Invalid file type. Only JPG files are allowed.");
                 }
+            }
+
+            // Validate Credit Card Number (Must be exactly 16 digits)
+            if (!Regex.IsMatch(RModel.CreditCardNo, @"^\d{16}$"))
+            {
+                ModelState.AddModelError("CreditCardNo", "Credit card number must be exactly 16 digits.");
+            }
+
+            // Validate Delivery Address (Max 250 characters)
+            if (RModel.DeliveryAddress.Length > 250)
+            {
+                ModelState.AddModelError("DeliveryAddress", "Delivery address cannot exceed 250 characters.");
             }
 
             // Check if email already exists

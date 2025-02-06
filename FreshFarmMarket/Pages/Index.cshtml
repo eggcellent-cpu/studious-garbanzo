@@ -16,7 +16,7 @@
 </head>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Welcome to FreshFarmMarket!</h1>
 
     @if (SignInManager.IsSignedIn(User))
     {
@@ -85,7 +85,7 @@
 
         // Log out on button click
         document.getElementById("logoutButton").addEventListener("click", function () {
-            window.location.href = '/Logout'; // Redirect to logout page
+            window.location.href = '/Logout?sessionExpired=true';
         });
     });
 </script>

@@ -22,51 +22,33 @@ namespace FreshFarmMarket.Pages
             _userManager = userManager;
         }
 
-        // Handles logging out when the user presses "Log Out"
-        public async Task<IActionResult> OnPostLogoutAsync()
-        {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // Get the user ID
-            if (!string.IsNullOrEmpty(userId))
-            {
-                Console.WriteLine($"Attempting to log logout for user: {userId}");
-                _logger.LogInformation($"Attempting to log logout for user: {userId}");
-
-                // Log the logout activity
-                await _auditLogService.LogActivityAsync(userId, "Logout",
-                    $"Successful logout from IP: {HttpContext.Connection.RemoteIpAddress}");
-
-                Console.WriteLine("Logout logged successfully.");
-                _logger.LogInformation("Logout logged successfully.");
-            }
-            else
-            {
-                Console.WriteLine("User ID is null, cannot log logout activity.");
-                _logger.LogWarning("User ID is null, cannot log logout activity.");
-            }
-
-            await _signInManager.SignOutAsync(); // Sign out the user
-            HttpContext.Session.Clear(); // Clear session data
-            Response.Cookies.Delete("AuthToken"); // Delete the AuthToken cookie
-            Response.Cookies.Delete("MyCookieAuth"); // Delete the MyCookieAuth cookie
-            Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
-            return RedirectToPage("/Login"); // Redirect to the Login page
-        }
-
-        public async Task<IActionResult> OnGetAsync()
+        // Logout Handler (For Both Manual Logout & Session Expiry)
+        public async Task<IActionResult> OnGetAsync(bool sessionExpired = false)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
             if (!string.IsNullOrEmpty(userId))
             {
                 await _auditLogService.LogActivityAsync(userId, "Logout",
-                    $"Successful logout from IP: {HttpContext.Connection.RemoteIpAddress}");
+                    $"User logged out from IP: {HttpContext.Connection.RemoteIpAddress}");
+                _logger.LogInformation($"User {userId} logged out.");
             }
 
             await _signInManager.SignOutAsync(); // Sign out the user
             HttpContext.Session.Clear(); // Clear session data
-            Response.Cookies.Delete("AuthToken"); // Delete AuthToken cookie
-            Response.Cookies.Delete("MyCookieAuth"); // Delete MyCookieAuth cookie
-            Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
-            return RedirectToPage("/Login"); // Redirect to the Login page
+
+            // Delete authentication & session cookies
+            Response.Cookies.Delete("AuthToken");
+            Response.Cookies.Delete("MyCookieAuth");
+            Response.Cookies.Delete(".AspNetCore.Session");
+
+            // Show session expiration message if applicable
+            if (sessionExpired)
+            {
+                TempData["SessionExpired"] = "Your session has expired. Please log in again.";
+            }
+
+            return RedirectToPage("/Login"); // Redirect to login page
         }
     }
 }

@@ -11,6 +11,7 @@ namespace FreshFarmMarket.ViewModels
 
 
         [Required(ErrorMessage = "Credit Card Number is required")]
+        [RegularExpression(@"^\d{16}$", ErrorMessage = "Credit card number must be exactly 16 digits.")]
         [DataType(DataType.CreditCard)]
         public string CreditCardNo { get; set; } = string.Empty;
 

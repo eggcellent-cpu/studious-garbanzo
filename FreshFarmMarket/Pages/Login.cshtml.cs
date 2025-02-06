@@ -107,25 +107,55 @@ namespace FreshFarmMarket.Pages
             LModel.Email = sanitizer.Sanitize(LModel.Email);
 
             var user = await _userManager.FindByEmailAsync(LModel.Email);
-            if (user == null)
+            var userFromDb = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == LModel.Email);
+
+
+            if (userFromDb == null)
             {
                 TempData["Error"] = "Invalid email or password.";
                 _logger.LogWarning("Login attempt failed: User not found for email {Email}", LModel.Email);
+
                 return Page();
             }
 
+            // Track the remaining attempts
+            var maxFailedAttempts = 3;  // Set your maximum failed attempts here
+            RemainingAttempts = maxFailedAttempts - userFromDb.FailedLoginAttempts;
+
+            TempData["RemainingAttempts"] = RemainingAttempts;
+
             // Check for account lockout
+
             if (user.LockoutEnabled && user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeOffset.UtcNow)
             {
-                TempData["Error"] = "Your account is locked due to multiple failed login attempts. Please contact support.";
-                _logger.LogWarning("Login attempt failed: Account locked for email {Email}", LModel.Email);
-                return Page();
+                var lockoutDuration = user.LockoutEnd.Value - DateTimeOffset.UtcNow;
+
+                if (lockoutDuration.TotalMinutes > 0)
+                {
+                    // Inform the user of the time remaining
+                    TempData["Error"] = $"Your account is locked. Please try again in {lockoutDuration.Minutes} minutes.";
+                    _logger.LogWarning("Login attempt failed: Account locked for email {Email}", LModel.Email);
+                    return Page();
+                }
+                else
+                {
+                    // Automatically unlock the account after lockout period has expired
+                    userFromDb.IsLocked = false;
+                    userFromDb.FailedLoginAttempts = 0;  // Reset failed attempts
+                    await _dbContext.SaveChangesAsync();
+                }
             }
+
 
             // Attempt to sign in the user
             var result = await _signInManager.PasswordSignInAsync(user, LModel.Password, false, lockoutOnFailure: true);
             if (result.Succeeded)
             {
+                // Reset failed login attempts on successful login
+                userFromDb.FailedLoginAttempts = 0;
+                userFromDb.LastFailedLogin = null;
+                await _dbContext.SaveChangesAsync();
+
                 var authToken = Guid.NewGuid().ToString();
 
                 // Store session token in database for tracking multiple logins
@@ -173,6 +203,13 @@ namespace FreshFarmMarket.Pages
             }
             else
             {
+                // Increment failed login attempts since credentials are incorrect
+                userFromDb.FailedLoginAttempts++;
+                userFromDb.LastFailedLogin = DateTime.UtcNow;
+
+                // Update the user record
+                await _dbContext.SaveChangesAsync();  // Save failed attempts increment
+
                 TempData["Error"] = "Invalid email or password.";
                 _logger.LogWarning("Login attempt failed: Invalid credentials for email {Email}", LModel.Email);
                 return Page();

@@ -532,7 +532,7 @@ C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\s
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FreshFarmMarket.props
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FreshFarmMarket.props
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\FreshFar.ACDFFEDF.Up2Date
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\FreshFarmMarket.genruntimeconfig.cache
 C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\ref\FreshFarmMarket.dll
+C:\Users\Lenovo\Source\Repos\FreshFarmMarket3\FreshFarmMarket\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

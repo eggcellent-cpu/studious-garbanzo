@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreshFarmMarket.Model
 {
@@ -12,23 +13,27 @@ namespace FreshFarmMarket.Model
         [Required, EmailAddress]
         public string Email { get; set; }
 
-        [StringLength(16)]
+        [StringLength(256)] 
         public string MobileNo { get; set; }
 
         public string Gender { get; set; }
 
+        [StringLength(256)]
         public string DeliveryAddress { get; set; }
 
+
+        [MinLength(16), MaxLength(256)]
         public string CreditCardNo { get; set; }
 
         public string AboutMe { get; set; }
 
         public string PhotoPath { get; set; }
 
-
         public int FailedLoginAttempts { get; set; } = 0;
         public bool IsLocked { get; set; } = false;
         public DateTime? LastFailedLogin { get; set; }
+        public bool LockoutEnabled { get; set; }
+
         public string Password { get; set; }
     }
 }
