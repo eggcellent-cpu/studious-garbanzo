@@ -25,6 +25,9 @@ namespace FreshFarmMarket.Pages
         // Logout Handler (For Both Manual Logout & Session Expiry)
         public async Task<IActionResult> OnGetAsync(bool sessionExpired = false)
         {
+            // Clear TempData for remaining attempts
+            TempData.Remove("RemainingAttempts");
+
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             if (!string.IsNullOrEmpty(userId))

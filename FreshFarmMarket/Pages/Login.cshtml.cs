@@ -119,21 +119,20 @@ namespace FreshFarmMarket.Pages
             }
 
             // Track the remaining attempts
-            var maxFailedAttempts = 3;  // Set your maximum failed attempts here
+            var maxFailedAttempts = 3;
             RemainingAttempts = maxFailedAttempts - userFromDb.FailedLoginAttempts;
 
             TempData["RemainingAttempts"] = RemainingAttempts;
 
             // Check for account lockout
 
-            if (user.LockoutEnabled && user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeOffset.UtcNow)
+            if (userFromDb.IsLocked && userFromDb.LastFailedLogin.HasValue)
             {
-                var lockoutDuration = user.LockoutEnd.Value - DateTimeOffset.UtcNow;
+                var lockoutDuration = DateTime.UtcNow - userFromDb.LastFailedLogin.Value;
 
-                if (lockoutDuration.TotalMinutes > 0)
+                if (lockoutDuration.TotalMinutes < 1)  // Assuming a 1-minute lockout duration
                 {
-                    // Inform the user of the time remaining
-                    TempData["Error"] = $"Your account is locked. Please try again in {lockoutDuration.Minutes} minutes.";
+                    TempData["Error"] = $"Your account is locked. Please try again in {1 - lockoutDuration.TotalMinutes:F0} minutes.";
                     _logger.LogWarning("Login attempt failed: Account locked for email {Email}", LModel.Email);
                     return Page();
                 }
@@ -206,6 +205,16 @@ namespace FreshFarmMarket.Pages
                 // Increment failed login attempts since credentials are incorrect
                 userFromDb.FailedLoginAttempts++;
                 userFromDb.LastFailedLogin = DateTime.UtcNow;
+
+                if (userFromDb.FailedLoginAttempts >= maxFailedAttempts)
+                {
+                    userFromDb.IsLocked = true;
+                    TempData["Error"] = "Your account has been locked due to multiple failed login attempts. Please try again later.";
+                }
+                else
+                {
+                    TempData["Error"] = $"Invalid email or password. You have {maxFailedAttempts - userFromDb.FailedLoginAttempts} attempts remaining.";
+                }
 
                 // Update the user record
                 await _dbContext.SaveChangesAsync();  // Save failed attempts increment

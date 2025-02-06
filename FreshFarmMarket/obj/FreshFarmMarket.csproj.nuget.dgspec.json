@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Source\\Repos\\FreshFarmMarket3\\FreshFarmMarket\\FreshFarmMarket.csproj": {}
+    "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Source\\Repos\\FreshFarmMarket3\\FreshFarmMarket\\FreshFarmMarket.csproj": {
+    "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Source\\Repos\\FreshFarmMarket3\\FreshFarmMarket\\FreshFarmMarket.csproj",
+        "projectUniqueName": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
         "projectName": "FreshFarmMarket",
-        "projectPath": "C:\\Users\\Lenovo\\Source\\Repos\\FreshFarmMarket3\\FreshFarmMarket\\FreshFarmMarket.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Source\\Repos\\FreshFarmMarket3\\FreshFarmMarket\\obj\\",
+        "projectPath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\FreshFarmMarket.csproj",
+        "packagesPath": "C:\\Users\\timel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\timel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +40,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -96,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
