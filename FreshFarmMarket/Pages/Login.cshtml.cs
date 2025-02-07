@@ -11,6 +11,8 @@ using System.Security.Claims;
 using FreshFarmMarket.Middleware;
 using Ganss.Xss;
 using FreshFarmMarket.Services;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace FreshFarmMarket.Pages
 {
@@ -97,7 +99,7 @@ namespace FreshFarmMarket.Pages
             if (string.IsNullOrEmpty(recaptchaToken) ||
                 !await _reCaptchaService.VerifyRecaptchaAsync(recaptchaToken, _recaptchaSecret, _recaptchaVerificationUrl))
             {
-                _logger.LogWarning("reCAPTCHA validation failed for token {Token}", recaptchaToken);
+                _logger.LogWarning("reCAPTCHA validation failed for token {TokenHash}", GetHash(recaptchaToken));  // Log hashed value
                 TempData["Error"] = "reCAPTCHA validation failed. Please try again.";
                 return Page();
             }
@@ -223,6 +225,15 @@ namespace FreshFarmMarket.Pages
                 TempData["Error"] = "Invalid email or password.";
                 _logger.LogWarning("Login attempt failed: Invalid credentials for email {Email}", LModel.Email);
                 return Page();
+            }
+        }
+
+        private string GetHash(string input)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+                return Convert.ToBase64String(hashBytes); // You can return the hashed value here
             }
         }
     }
