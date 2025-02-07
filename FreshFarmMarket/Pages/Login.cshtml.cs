@@ -106,6 +106,7 @@ namespace FreshFarmMarket.Pages
             var sanitizer = new HtmlSanitizer();
             LModel.Email = sanitizer.Sanitize(LModel.Email);
 
+
             var user = await _userManager.FindByEmailAsync(LModel.Email);
             var userFromDb = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == LModel.Email);
 

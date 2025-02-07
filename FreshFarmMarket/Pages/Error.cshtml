@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{statusCode:int}"
 @model ErrorModel
 @{
     ViewData["Title"] = "Error";
@@ -13,6 +13,9 @@
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
 }
+
+<h1>Error @Model.StatusCode</h1>
+<p>Something went wrong. The status code is: @Model.StatusCode</p>
 
 <h3>Development Mode</h3>
 <p>

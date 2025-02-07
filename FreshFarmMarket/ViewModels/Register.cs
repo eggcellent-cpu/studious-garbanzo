@@ -31,7 +31,7 @@ namespace FreshFarmMarket.ViewModels
 
 
         [Required(ErrorMessage = "Email Address is required")]
-        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address format")]
         public string Email { get; set; } = string.Empty;
 
 

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
@@ -8,6 +9,8 @@ namespace FreshFarmMarket.Pages
     [IgnoreAntiforgeryToken]
     public class ErrorModel : PageModel
     {
+        public int StatusCode { get; set; }
+
         public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
@@ -19,9 +22,10 @@ namespace FreshFarmMarket.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(int statusCode)
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            StatusCode = statusCode;
         }
     }
 
