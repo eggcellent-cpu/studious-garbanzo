@@ -13,6 +13,8 @@ namespace FreshFarmMarket.Model
         public string PhotoPath { get; set; } // JPG photo as a byte array (or a file path reference)
 
         public string? SessionToken { get; set; }
-    }
 
+        public List<string> PasswordHistory { get; set; } = new List<string>(); // Store last 2 password hashes
+
+    }
 }

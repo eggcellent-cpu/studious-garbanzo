@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\viewmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\model\\customidentityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\model\\customidentityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -98,10 +130,6 @@
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\model\\customidentityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\model\\customidentityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113751_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -136,10 +164,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\88dcdeacda668cfecf8627b9b0aa04cfa92808e21f9d7ae02a07df1719903048\\FreshFarmMarket\\Services\\EncryptionService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\viewmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\viewmodels\\recaptcharesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\recaptcharesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -165,6 +189,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\timel\\source\\repos\\fresh trials\\freshfarmmarket\\freshfarmmarket\\migrations\\20250206180050_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\migrations\\20250206180050_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -174,7 +206,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,31 +222,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomErrorHandlingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAqwEcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ChangePasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\ChangePasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeToolTip": "FreshFarmMarket\\ViewModels\\ChangePasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T11:24:08.063Z"
+              "WhenOpened": "2025-02-08T20:26:55.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "FreshFarmMarket\\ViewModels\\ResetPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T20:26:11.499Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T20:12:46.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResetPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T20:11:26.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Login.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\Login.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Login.cs",
+              "RelativeToolTip": "FreshFarmMarket\\ViewModels\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T14:08:02.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ChangePassword.cshtml",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-08T20:12:36.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\ResetPassword.cshtml",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-08T20:11:12.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAowPAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:05:00.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "404.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T13:12:14.238Z"
+              "WhenOpened": "2025-02-02T13:12:14.238Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "404.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\404.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\404.cshtml",
@@ -227,20 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAkwOcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:05:00.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "401.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\401.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\401.cshtml.cs",
@@ -248,11 +360,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error\\401.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T14:16:33.778Z"
+              "WhenOpened": "2025-02-07T14:16:33.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Register.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml",
@@ -265,7 +378,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "CustomIdentityUser.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\CustomIdentityUser.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\CustomIdentityUser.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\CustomIdentityUser.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Model\\CustomIdentityUser.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T18:14:53.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CustomErrorHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T11:24:08.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Privacy.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Privacy.cshtml",
@@ -273,11 +412,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T14:42:36.803Z"
+              "WhenOpened": "2025-01-26T14:42:36.803Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Login.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml",
@@ -290,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Program.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Program.cs",
@@ -298,11 +438,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Program.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAuwE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T14:24:56.314Z"
+              "WhenOpened": "2025-01-26T14:24:56.314Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "Error.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error.cshtml.cs",
@@ -310,11 +451,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error.cshtml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T14:16:50.764Z"
+              "WhenOpened": "2025-02-07T14:16:50.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error.cshtml",
@@ -322,23 +464,25 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAuwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-07T14:17:51.058Z"
+              "WhenOpened": "2025-02-07T14:17:51.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "Privacy.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA6wA4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T13:32:53.528Z"
+              "WhenOpened": "2025-02-07T13:32:53.528Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "400.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\400.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\400.cshtml",
@@ -346,11 +490,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error\\400.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-07T12:59:01.515Z"
+              "WhenOpened": "2025-02-07T12:59:01.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "401.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\401.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\401.cshtml",
@@ -358,11 +503,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error\\401.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-07T13:00:15.366Z"
+              "WhenOpened": "2025-02-07T13:00:15.366Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "403.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Error\\403.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\403.cshtml",
@@ -370,11 +516,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Error\\403.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-07T13:00:25.236Z"
+              "WhenOpened": "2025-02-07T13:00:25.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\User.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\User.cs",
@@ -382,35 +529,38 @@
               "RelativeToolTip": "FreshFarmMarket\\Model\\User.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwBsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T14:09:40.784Z"
+              "WhenOpened": "2025-01-26T14:09:40.784Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAwGkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAxwGkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T10:31:29.794Z"
+              "WhenOpened": "2025-02-07T10:31:29.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Register.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\Register.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Register.cs",
               "RelativeToolTip": "FreshFarmMarket\\ViewModels\\Register.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA5wCIAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T11:15:36.217Z"
+              "WhenOpened": "2025-02-06T11:15:36.217Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Index.cshtml",
@@ -418,23 +568,25 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAoAAAAAAAAAAAAowBUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T15:40:35.822Z"
+              "WhenOpened": "2025-01-26T15:40:35.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAIBJwCUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAIBZwCUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T14:20:05.885Z"
+              "WhenOpened": "2025-01-26T14:20:05.885Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Controllers\\HomeController.cs",
@@ -442,47 +594,38 @@
               "RelativeToolTip": "FreshFarmMarket\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAuwBMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T14:31:03.499Z"
+              "WhenOpened": "2025-02-02T14:31:03.499Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwB4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwB4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T20:15:56.003Z"
+              "WhenOpened": "2025-02-04T20:15:56.003Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CustomIdentityUser.cs",
-              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\CustomIdentityUser.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\CustomIdentityUser.cs",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\CustomIdentityUser.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Model\\CustomIdentityUser.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T18:14:53.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "Logout.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Logout.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Logout.cshtml.cs",
               "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Logout.cshtml.cs",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Logout.cshtml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA7wCIAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwCIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:14:57.207Z"
+              "WhenOpened": "2025-01-26T15:14:57.207Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.Users.sql",
@@ -491,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "20250206180050_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Migrations\\20250206180050_InitialCreate.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Migrations\\20250206180050_InitialCreate.cs",
@@ -499,11 +642,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Migrations\\20250206180050_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T18:00:50.602Z"
+              "WhenOpened": "2025-02-06T18:00:50.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "20250206113148_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113148_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113148_InitialCreate.cs",
@@ -514,7 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "20250206113751_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113751_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113751_InitialCreate.cs",
@@ -525,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "20250206111733_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206111733_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206111733_InitialCreate.cs",
@@ -536,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "dbo.AuditLogs.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.AuditLogs.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.AuditLogs.sql",
@@ -545,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\appsettings.json",
               "RelativeDocumentMoniker": "FreshFarmMarket\\appsettings.json",
@@ -553,11 +697,12 @@
               "RelativeToolTip": "FreshFarmMarket\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-26T14:23:25.897Z"
+              "WhenOpened": "2025-01-26T14:23:25.897Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "EncryptionService.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Services\\EncryptionService.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\EncryptionService.cs",
@@ -565,11 +710,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Services\\EncryptionService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwBAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T20:26:58.661Z"
+              "WhenOpened": "2025-02-04T20:26:58.661Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "AuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Services\\AuditLogService.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\AuditLogService.cs",
@@ -577,11 +723,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Services\\AuditLogService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T15:14:21.628Z"
+              "WhenOpened": "2025-02-02T15:14:21.628Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "20250206103523_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206103523_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206103523_InitialCreate.cs",
@@ -592,18 +739,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "SQLQuery2.sql",
+              "DocumentIndex": 40,
+              "Title": "SQLQuery2.sql ",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery2.sql",
               "RelativeDocumentMoniker": "SQLQuery2.sql",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery2.sql",
-              "RelativeToolTip": "SQLQuery2.sql",
+              "ToolTip": "SQLQuery2.sql ",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-06T10:30:27.278Z"
+              "WhenOpened": "2025-02-06T10:30:27.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "EncryptionService.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\88dcdeacda668cfecf8627b9b0aa04cfa92808e21f9d7ae02a07df1719903048\\FreshFarmMarket\\Services\\EncryptionService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\AppData\\Local\\SourceServer\\88dcdeacda668cfecf8627b9b0aa04cfa92808e21f9d7ae02a07df1719903048\\FreshFarmMarket\\Services\\EncryptionService.cs",
@@ -614,19 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Login.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\Login.cs",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\Login.cs",
-              "RelativeToolTip": "FreshFarmMarket\\ViewModels\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T14:08:02.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 42,
               "Title": "ReCaptchaResponse.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\ViewModels\\ReCaptchaResponse.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\ReCaptchaResponse.cs",
@@ -634,11 +769,12 @@
               "RelativeToolTip": "FreshFarmMarket\\ViewModels\\ReCaptchaResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T12:10:08.852Z"
+              "WhenOpened": "2025-02-02T12:10:08.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 43,
               "Title": "ReCaptcha.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Middleware\\ReCaptcha.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
@@ -646,22 +782,23 @@
               "RelativeToolTip": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAYwAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:09:13.619Z"
+              "WhenOpened": "2025-01-26T15:09:13.619Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "SQLQuery1.sql",
+              "DocumentIndex": 44,
+              "Title": "SQLQuery1.sql ",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "SQLQuery1.sql",
-              "ToolTip": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\SQLQuery1.sql",
-              "RelativeToolTip": "SQLQuery1.sql",
+              "ToolTip": "SQLQuery1.sql ",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-06T04:12:30.288Z"
+              "WhenOpened": "2025-02-06T04:12:30.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "20250206035907_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206035907_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206035907_InitialCreate.cs",
@@ -672,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "MyAuthDbContext.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Model\\MyAuthDbContext.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\MyAuthDbContext.cs",
@@ -680,11 +817,12 @@
               "RelativeToolTip": "FreshFarmMarket\\Model\\MyAuthDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T14:22:32.612Z"
+              "WhenOpened": "2025-01-26T14:22:32.612Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\fresh trials\\FreshFarmMarket\\FreshFarmMarket\\Pages\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Account\\AccessDenied.cshtml",
@@ -692,7 +830,8 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Account\\AccessDenied.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T16:09:37.655Z"
+              "WhenOpened": "2025-01-26T16:09:37.655Z",
+              "EditorCaption": ""
             }
           ]
         }
