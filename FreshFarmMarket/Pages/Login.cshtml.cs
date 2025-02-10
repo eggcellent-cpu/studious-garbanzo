@@ -230,39 +230,6 @@ namespace FreshFarmMarket.Pages
             }
         }
 
-        // Forget and Reset Password
-        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPassword forgotPassword)
-        {
-            if (!ModelState.IsValid)
-            {
-                TempData["Message"] = "Invalid input.";
-                return RedirectToPage("/ForgotPassword");
-            }
-
-            var user = await _userManager.FindByEmailAsync(forgotPassword.Email!);
-            if (user == null)
-            {
-                TempData["Message"] = "User not found.";
-                return RedirectToPage("/ForgotPassword");
-            }
-
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            var param = new Dictionary<string, string?>
-            {
-                { "token", token },
-                { "email", forgotPassword.Email! }
-            };
-
-            var callbackUrl = QueryHelpers.AddQueryString(forgotPassword.ClientUrl!, param);
-            var emailBody = $"Click <a href='{callbackUrl}'>here</a> to reset your password.";
-
-            await _emailSender.SendEmailAsync(forgotPassword.Email!, "Reset Password", emailBody);
-
-            TempData["Message"] = "Password reset link has been sent.";
-            return RedirectToPage("/ForgotPassword");  // Or another success page
-        }
-
-
         private string GetHash(string input)
         {
             using (var sha256 = SHA256.Create())

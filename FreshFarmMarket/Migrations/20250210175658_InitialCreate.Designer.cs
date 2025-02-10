@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreshFarmMarket.Migrations
 {
     [DbContext(typeof(MyAuthDbContext))]
-    [Migration("20250210114722_InitialCreate")]
+    [Migration("20250210175658_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

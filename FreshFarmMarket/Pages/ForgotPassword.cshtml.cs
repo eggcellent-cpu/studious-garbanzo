@@ -3,6 +3,7 @@ using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreshFarmMarket.Pages
 {
@@ -12,6 +13,8 @@ namespace FreshFarmMarket.Pages
         private readonly IEmailSender _emailSender;
 
         [BindProperty]
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; }
 
         public ForgotPasswordModel(UserManager<CustomIdentityUser> userManager, IEmailSender emailSender)

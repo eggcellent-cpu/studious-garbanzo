@@ -3,11 +3,10 @@ using FreshFarmMarket.Model;
 using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.WebUtilities;
 using IEmailSender = FreshFarmMarket.Services.IEmailSender;
-
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,11 +20,10 @@ builder.Services.AddHttpClient();
 // Configure Database and Identity
 builder.Services.AddDbContext<MyAuthDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyAuthConnectionString")));
+
 builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<MyAuthDbContext>()
     .AddDefaultTokenProviders();
-
-builder.Services.AddSession();
 
 // Configure Authentication and Cookie settings
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -33,17 +31,20 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Login";
         options.AccessDeniedPath = "/AccessDenied";
+        options.Cookie.HttpOnly = true;
         options.Cookie.Name = "MyCookieAuth";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-        options.SlidingExpiration = true;
+        options.ExpireTimeSpan = TimeSpan.FromSeconds(30); 
+        options.SlidingExpiration = true; // Reset the expiration time on each request
+        options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Ensure cookies are only sent over HTTPS
+        options.Cookie.SameSite = SameSiteMode.Strict; // Prevent CSRF attacks
     });
-
 
 // Configure Authorization and Identity options
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("MustBelongToHRDepartment", policy => policy.RequireClaim("Department", "HR"));
 });
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = true;
@@ -53,26 +54,26 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequireLowercase = true;
 });
 
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddDistributedMemoryCache();
+// Configure Session
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(30);
+    options.IdleTimeout = TimeSpan.FromSeconds(30); // Session expires after 30 minutes
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     options.Cookie.SameSite = SameSiteMode.Strict;
 });
 
-var emailPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD");
+// Configure Email Service
+//var emailPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD"); --> for manually
 
 var emailConfig = new EmailConfiguration
 {
-    From = "bozow341@gmail.com",
+    From = "testing.testy.test1234@gmail.com",
     SmtpServer = "smtp.gmail.com",
     Port = 587,
-    Username = "bozow341@gmail.com",
-    Password = emailPassword // Load from environment variable
+    Username = "testing.testy.test1234@gmail.com",
+    Password = "ovwv gfwg fbue alyj" // Load from environment variable
 };
 
 builder.Services.AddSingleton(emailConfig);
@@ -81,7 +82,6 @@ builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
     opt.TokenLifespan = TimeSpan.FromHours(1)
 );
-
 
 var app = builder.Build();
 
@@ -99,6 +99,17 @@ if (!app.Environment.IsDevelopment())
     app.UseStatusCodePagesWithReExecute("/Error/{0}");
     app.UseHsts();
 }
+
+// Middleware to clear cookies on app restart
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/" && !context.User.Identity.IsAuthenticated)
+    {
+        await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    }
+
+    await next();
+});
 
 app.UseMiddleware<CustomErrorHandlingMiddleware>();
 

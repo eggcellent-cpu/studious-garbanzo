@@ -129,12 +129,34 @@ namespace FreshFarmMarket.Pages
                     user.PhotoPath = "/uploads/" + uniqueFileName; // Store relative file path
                 }
 
-                // Create user in Identity (this hashes the password internally)
+                // Create user in Identity 
                 var result = await userManager.CreateAsync(user, RModel.Password);
 
                 if (result.Succeeded)
                 {
-                    await signInManager.SignInAsync(user, false);
+                    // Sign in the user
+                    await signInManager.SignInAsync(user, isPersistent: false);
+                    _logger.LogInformation("User signed in successfully.");
+
+                    // Log audit entry
+                    try
+                    {
+                        var auditLog = new AuditLog
+                        {
+                            UserId = user.Id,
+                            Activity = "Registration",
+                            Timestamp = DateTime.UtcNow,
+                            Details = "User registered successfully."
+                        };
+
+                        _dbContext.AuditLogs.Add(auditLog);
+                        await _dbContext.SaveChangesAsync();
+                        _logger.LogInformation("Audit log entry created successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to log audit entry.");
+                    }
 
                     // Save additional user info to the database
                     var newUser = new User
@@ -155,6 +177,8 @@ namespace FreshFarmMarket.Pages
                     _dbContext.Users.Add(newUser);
                     await _dbContext.SaveChangesAsync();
 
+                    // Set success message
+                    TempData["SuccessMessage"] = "Registration successful! Please log in.";
                     return RedirectToPage("Index");
                 }
 
