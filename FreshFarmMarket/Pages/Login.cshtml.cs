@@ -1,7 +1,6 @@
 using FreshFarmMarket.Model;
 using FreshFarmMarket.ViewModels;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -13,6 +12,7 @@ using Ganss.Xss;
 using FreshFarmMarket.Services;
 using System.Text;
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace FreshFarmMarket.Pages
 {
@@ -27,13 +27,14 @@ namespace FreshFarmMarket.Pages
         private readonly SignInManager<CustomIdentityUser> _signInManager;
         private readonly UserManager<CustomIdentityUser> _userManager;
         private readonly AuditLogService _auditLogService;
+        private readonly IEmailSender _emailSender;
 
         [BindProperty]
         public Login LModel { get; set; }
 
         public int RemainingAttempts { get; private set; }
 
-        public LoginModel(MyAuthDbContext dbContext, ILogger<LoginModel> logger, ReCaptchaService reCaptchaService, IConfiguration configuration, SignInManager<CustomIdentityUser> signInManager, UserManager<CustomIdentityUser> userManager, AuditLogService auditLogService)
+        public LoginModel(MyAuthDbContext dbContext, ILogger<LoginModel> logger, ReCaptchaService reCaptchaService, IConfiguration configuration, SignInManager<CustomIdentityUser> signInManager, UserManager<CustomIdentityUser> userManager, AuditLogService auditLogService, IEmailSender emailSender)
         {
             _dbContext = dbContext;
             _logger = logger;
@@ -43,6 +44,7 @@ namespace FreshFarmMarket.Pages
             _signInManager = signInManager;
             _userManager = userManager;
             _auditLogService = auditLogService;
+            _emailSender = emailSender;
         }
 
         public IActionResult OnGet()
@@ -227,6 +229,39 @@ namespace FreshFarmMarket.Pages
                 return Page();
             }
         }
+
+        // Forget and Reset Password
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPassword forgotPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["Message"] = "Invalid input.";
+                return RedirectToPage("/ForgotPassword");
+            }
+
+            var user = await _userManager.FindByEmailAsync(forgotPassword.Email!);
+            if (user == null)
+            {
+                TempData["Message"] = "User not found.";
+                return RedirectToPage("/ForgotPassword");
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var param = new Dictionary<string, string?>
+            {
+                { "token", token },
+                { "email", forgotPassword.Email! }
+            };
+
+            var callbackUrl = QueryHelpers.AddQueryString(forgotPassword.ClientUrl!, param);
+            var emailBody = $"Click <a href='{callbackUrl}'>here</a> to reset your password.";
+
+            await _emailSender.SendEmailAsync(forgotPassword.Email!, "Reset Password", emailBody);
+
+            TempData["Message"] = "Password reset link has been sent.";
+            return RedirectToPage("/ForgotPassword");  // Or another success page
+        }
+
 
         private string GetHash(string input)
         {

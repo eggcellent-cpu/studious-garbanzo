@@ -3,7 +3,11 @@ using FreshFarmMarket.Model;
 using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.WebUtilities;
+using IEmailSender = FreshFarmMarket.Services.IEmailSender;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,6 +63,24 @@ builder.Services.AddSession(options =>
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     options.Cookie.SameSite = SameSiteMode.Strict;
 });
+
+var emailPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD");
+
+var emailConfig = new EmailConfiguration
+{
+    From = "bozow341@gmail.com",
+    SmtpServer = "smtp.gmail.com",
+    Port = 587,
+    Username = "bozow341@gmail.com",
+    Password = emailPassword // Load from environment variable
+};
+
+builder.Services.AddSingleton(emailConfig);
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
+    opt.TokenLifespan = TimeSpan.FromHours(1)
+);
 
 
 var app = builder.Build();
