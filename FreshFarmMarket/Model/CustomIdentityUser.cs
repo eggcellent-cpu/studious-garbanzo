@@ -15,7 +15,5 @@ namespace FreshFarmMarket.Model
         public string? SessionToken { get; set; }
 
         public List<string> PasswordHistory { get; set; } = new List<string>(); // Store last 2 password hashes
-        public DateTime LastPasswordChange { get; set; }
-
     }
 }

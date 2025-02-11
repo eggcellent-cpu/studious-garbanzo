@@ -16,7 +16,6 @@ builder.Services.AddScoped<ReCaptchaService>();
 builder.Services.AddScoped<AuditLogService>();
 builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<UserManager<CustomIdentityUser>, CustomUserManager>();
 
 
 // Configure Database and Identity

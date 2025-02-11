@@ -33,6 +33,7 @@ namespace FreshFarmMarket.Model
         public bool IsLocked { get; set; } = false;
         public DateTime? LastFailedLogin { get; set; }
         public bool LockoutEnabled { get; set; }
+        public DateTime? PasswordLastChanged { get; set; } 
 
         public string Password { get; set; }
     }

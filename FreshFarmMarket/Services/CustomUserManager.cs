@@ -1,5 +1,6 @@
 ﻿using FreshFarmMarket.Model;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
@@ -7,47 +8,89 @@ namespace FreshFarmMarket.Services
 {
     public class CustomUserManager : UserManager<CustomIdentityUser>
     {
-        private readonly TimeSpan minPasswordAge = TimeSpan.FromMinutes(5); // Cannot change within 5 mins
-        private readonly TimeSpan maxPasswordAge = TimeSpan.FromDays(30); // Must change after 30 days
+        private readonly MyAuthDbContext _dbContext;
 
-        public CustomUserManager(IUserStore<CustomIdentityUser> store, IOptions<IdentityOptions> optionsAccessor,
-            IPasswordHasher<CustomIdentityUser> passwordHasher, IEnumerable<IUserValidator<CustomIdentityUser>> userValidators,
-            IEnumerable<IPasswordValidator<CustomIdentityUser>> passwordValidators, ILookupNormalizer keyNormalizer,
-            IdentityErrorDescriber errors, IServiceProvider services, ILogger<UserManager<CustomIdentityUser>> logger)
+        public CustomUserManager(
+            MyAuthDbContext dbContext,
+            IUserStore<CustomIdentityUser> store,
+            IOptions<IdentityOptions> optionsAccessor,
+            IPasswordHasher<CustomIdentityUser> passwordHasher,
+            IEnumerable<IUserValidator<CustomIdentityUser>> userValidators,
+            IEnumerable<IPasswordValidator<CustomIdentityUser>> passwordValidators,
+            ILookupNormalizer keyNormalizer,
+            IdentityErrorDescriber errors,
+            IServiceProvider services,
+            ILogger<UserManager<CustomIdentityUser>> logger)
             : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
         {
+            _dbContext = dbContext;
         }
 
-        public async Task<IdentityResult> ChangePasswordWithPolicyAsync(CustomIdentityUser user, string currentPassword, string newPassword)
+        public async Task<IdentityResult> ChangePasswordWithPolicyAsync(CustomIdentityUser user, string oldPassword, string newPassword)
         {
-            if ((DateTime.UtcNow - user.LastPasswordChange) < minPasswordAge)
+            if (user == null)
             {
-                return IdentityResult.Failed(new IdentityError { Description = "You must wait before changing your password again." });
+                return IdentityResult.Failed(new IdentityError { Description = "User cannot be null." });
             }
 
-            if (user.PasswordHistory.Take(2).Any(p => PasswordHasher.VerifyHashedPassword(user, p, newPassword) == PasswordVerificationResult.Success))
+            // Retrieve User entity from the database
+            var userFromDb = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+            if (userFromDb == null)
             {
-                return IdentityResult.Failed(new IdentityError { Description = "You cannot reuse your last 2 passwords." });
+                return IdentityResult.Failed(new IdentityError { Description = "User not found." });
             }
 
-            var result = await base.ChangePasswordAsync(user, currentPassword, newPassword);
+            var identityUser = await _dbContext.Users.OfType<CustomIdentityUser>().FirstOrDefaultAsync(u => u.Email == user.Email) ?? user;
+
+
+            // Check password history
+            var lastTwoPasswords = await _dbContext.PasswordHistories
+                .AsNoTracking()
+                .Where(ph => ph.UserId == user.Id)
+                .OrderByDescending(ph => ph.CreatedAt)
+                .Take(2)
+                .ToListAsync();
+
+            foreach (var passwordHistory in lastTwoPasswords)
+            {
+                if (PasswordHasher.VerifyHashedPassword(identityUser, passwordHistory.HashedPassword, newPassword) == PasswordVerificationResult.Success)
+                {
+                    return IdentityResult.Failed(new IdentityError { Description = "You cannot reuse your last two passwords." });
+                }
+            }
+
+            // Enforce minimum password age (e.g., 2 min for testing)
+            if (userFromDb.PasswordLastChanged.HasValue && DateTime.UtcNow - userFromDb.PasswordLastChanged.Value < TimeSpan.FromMinutes(2))
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "You cannot change your password more than once every 2 minutes." });
+            }
+
+            // Enforce maximum password age (e.g., 3 min for testing)
+            if (userFromDb.PasswordLastChanged.HasValue && DateTime.UtcNow - userFromDb.PasswordLastChanged.Value > TimeSpan.FromMinutes(3))
+            {
+                return await ChangePasswordAsync(identityUser, oldPassword, newPassword);
+            }
+
+            // Proceed with password change
+            var result = await ChangePasswordAsync(identityUser, oldPassword, newPassword);
             if (result.Succeeded)
             {
-                if (user.PasswordHistory.Count >= 2)
-                    user.PasswordHistory.RemoveAt(0); // Keep only last 2 passwords
+                // Update password change timestamp in User entity
+                userFromDb.PasswordLastChanged = DateTime.UtcNow;
+                _dbContext.Entry(userFromDb).Property(u => u.PasswordLastChanged).IsModified = true;
 
-                user.PasswordHistory.Add(PasswordHasher.HashPassword(user, newPassword));
-                user.LastPasswordChange = DateTime.UtcNow;
+                // Add the new password to the history
+                _dbContext.PasswordHistories.Add(new PasswordHistory
+                {
+                    UserId = identityUser.Id,
+                    HashedPassword = PasswordHasher.HashPassword(identityUser, newPassword),
+                    CreatedAt = DateTime.UtcNow
+                });
 
-                await UpdateAsync(user);
+                await _dbContext.SaveChangesAsync();
             }
 
             return result;
-        }
-
-        public bool IsPasswordExpired(CustomIdentityUser user)
-        {
-            return (DateTime.UtcNow - user.LastPasswordChange) > maxPasswordAge;
         }
     }
 }

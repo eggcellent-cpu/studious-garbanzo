@@ -58,6 +58,19 @@
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+
+        .change-password-link {
+            color: #B19CD9; /* Light purple */
+            display: block; /* Makes it take up the full width */
+            margin-top: 20px; /* Space between the table and the link */
+            text-align: center; /* Centers the link */
+        }
+
+        .change-password-link:hover {
+            color: #9B77D1; /* Slightly darker purple when hovering */
+            text-decoration: underline; /* Underline on hover */
+        }
+
     </style>
 </head>
 
@@ -109,6 +122,8 @@
                     </td>
                 </tr>
             </table>
+            <a href="/ChangePassword" class="btn btn-link change-password-link">Change Password</a> 
+
         </div>
     }
     else
