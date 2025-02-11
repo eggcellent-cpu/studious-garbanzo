@@ -1,6 +1,5 @@
 ﻿using System.Net.Mail;
 using System.Net;
-using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace FreshFarmMarket.Services
 {
@@ -19,11 +18,12 @@ namespace FreshFarmMarket.Services
         {
             try
             {
-                var client = new SmtpClient(_emailConfig.SmtpServer)
+                var smtpClient = new SmtpClient(_emailConfig.SmtpServer)
                 {
                     Port = _emailConfig.Port,
                     Credentials = new NetworkCredential(_emailConfig.Username, _emailConfig.Password),
-                    EnableSsl = true
+                    EnableSsl = true,
+                    Timeout = 30000
                 };
 
                 var mailMessage = new MailMessage
@@ -35,12 +35,12 @@ namespace FreshFarmMarket.Services
                 };
                 mailMessage.To.Add(to);
 
-                await client.SendMailAsync(mailMessage);
+                await smtpClient.SendMailAsync(mailMessage);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Failed to send email.");
-                throw; // Re-throw the exception to propagate it
+                throw new Exception($"Email sending failed: {ex.Message}", ex);
             }
         }
     }

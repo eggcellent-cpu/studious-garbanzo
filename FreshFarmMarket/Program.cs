@@ -16,6 +16,8 @@ builder.Services.AddScoped<ReCaptchaService>();
 builder.Services.AddScoped<AuditLogService>();
 builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<UserManager<CustomIdentityUser>, CustomUserManager>();
+
 
 // Configure Database and Identity
 builder.Services.AddDbContext<MyAuthDbContext>(options =>
@@ -79,9 +81,11 @@ var emailConfig = new EmailConfiguration
 builder.Services.AddSingleton(emailConfig);
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
-builder.Services.Configure<DataProtectionTokenProviderOptions>(opt =>
-    opt.TokenLifespan = TimeSpan.FromHours(1)
-);
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
+{
+    options.TokenLifespan = TimeSpan.FromMinutes(1);
+});
+
 
 var app = builder.Build();
 

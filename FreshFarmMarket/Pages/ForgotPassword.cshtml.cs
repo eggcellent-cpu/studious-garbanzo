@@ -45,10 +45,16 @@ namespace FreshFarmMarket.Pages
                 values: new { token, email = Email },
                 protocol: Request.Scheme);
 
-            var emailBody = $"Click <a href='{callbackUrl}'>here</a> to reset your password.";
+            var emailBody = $@"
+            <p>Hello,</p>
+            <p>You requested a password reset. Click the link below to reset your password:</p>
+            <p><a href='{callbackUrl}'>Reset Password</a></p>
+            <p><strong>Note:</strong> This link is valid for <b>1 minutes</b>. If you did not request this, please ignore this email.</p>
+            <p>FreshFarmMarket Team</p>"; 
+            
             await _emailSender.SendEmailAsync(Email, "Password Reset", emailBody);
 
-            TempData["Message"] = "Password reset link has been sent.";
+            TempData["Message"] = "Password reset link has been sent. Please check your email.";
             return RedirectToPage();
         }
     }

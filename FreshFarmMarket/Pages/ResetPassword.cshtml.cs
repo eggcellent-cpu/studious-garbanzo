@@ -56,11 +56,18 @@ namespace FreshFarmMarket.Pages
                 TempData["Message"] = "Password has been reset successfully.";
                 return RedirectToPage("/Login"); // Redirect to Login page after successful reset
             }
-            else
+            // Handle specific errors
+            foreach (var error in resetResult.Errors)
             {
-                TempData["Error"] = "There was an error resetting the password.";
-                return Page();
+                if (error.Code == "InvalidToken")
+                {
+                    TempData["Error"] = "The password reset link is invalid or has expired.";
+                    return RedirectToPage("/ForgotPassword"); // Redirect user to request a new reset link
+                }
             }
+
+            TempData["Error"] = "There was an error resetting the password.";
+            return Page();
         }
     }
 }

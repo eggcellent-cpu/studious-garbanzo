@@ -60,6 +60,14 @@
                     </div>
                 }
 
+                @if (ViewData["PasswordExpired"] != null)
+                {
+                    <div class="alert alert-danger">
+                        Your password has expired. Please <a asp-action="ChangePassword">change your password</a> before continuing.
+                    </div>
+                }
+
+
             </form>
         </div>
     </div>

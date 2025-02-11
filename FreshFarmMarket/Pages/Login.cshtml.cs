@@ -150,6 +150,23 @@ namespace FreshFarmMarket.Pages
                 }
             }
 
+            if (userFromDb.PasswordLastChanged.HasValue)
+            {
+                var passwordAge = DateTime.UtcNow - userFromDb.PasswordLastChanged.Value;
+
+                if (passwordAge < TimeSpan.FromMinutes(30))
+                {
+                    ModelState.AddModelError(string.Empty, "You cannot change your password within 30 minutes of the last change.");
+                    return Page();
+                }
+
+                if (passwordAge > TimeSpan.FromDays(90))
+                {
+                    ModelState.AddModelError(string.Empty, "Your password has expired. Please change it.");
+                    return Page();
+                }
+            }
+
 
             // Attempt to sign in the user
             var result = await _signInManager.PasswordSignInAsync(user, LModel.Password, false, lockoutOnFailure: true);
