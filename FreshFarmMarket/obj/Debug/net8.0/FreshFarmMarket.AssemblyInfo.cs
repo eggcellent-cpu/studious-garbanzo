@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreshFarmMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61bc6269d93eee09ae69223ee76a982e03b808e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e80769af57a7f48a59352da8afb132ac32ebed3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreshFarmMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreshFarmMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

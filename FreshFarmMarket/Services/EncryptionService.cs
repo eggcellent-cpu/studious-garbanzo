@@ -98,7 +98,6 @@ namespace FreshFarmMarket.Services
                     using (var sr = new StreamReader(cs))
                     {
                         string decryptedData = sr.ReadToEnd();
-                        _logger.LogInformation($"Decrypted Data: {decryptedData}");
                         return decryptedData;
                     }
                 }

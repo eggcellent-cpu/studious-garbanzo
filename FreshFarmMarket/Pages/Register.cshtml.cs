@@ -134,6 +134,18 @@ namespace FreshFarmMarket.Pages
 
                 if (result.Succeeded)
                 {
+                    // Save password history (add to PasswordHistories table)
+                    _dbContext.PasswordHistories.Add(new PasswordHistory
+                    {
+                        UserId = user.Id,  // Store the user ID
+                        HashedPassword = user.PasswordHash, // Save the hashed password
+                        CreatedAt = DateTime.UtcNow // Timestamp
+                    });
+
+                    await _dbContext.SaveChangesAsync();  // Save changes to the database
+                    _logger.LogInformation("Password history added for new user {UserId}.", user.Id);
+
+
                     // Sign in the user
                     await signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User signed in successfully.");
@@ -179,7 +191,7 @@ namespace FreshFarmMarket.Pages
 
                     // Set success message
                     TempData["SuccessMessage"] = "Registration successful! Please log in.";
-                    return RedirectToPage("Index");
+                    return RedirectToPage("Login");
                 }
 
                 // Handle Identity errors

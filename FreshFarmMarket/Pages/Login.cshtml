@@ -67,6 +67,21 @@
                     </div>
                 }
 
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @if (TempData["ResetMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["ResetMessage"]
+                    </div>
+                }
+
+
 
             </form>
         </div>

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FreshFarmMarket.Model
 {
-    public class User
+    public class User : IdentityUser
     {
         public Guid UserID { get; set; }
 

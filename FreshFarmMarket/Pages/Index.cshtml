@@ -203,7 +203,7 @@
                                 'Content-Type': 'application/json',
                             },
                         }).then(() => {
-                            window.location.href = '/Login';
+                            window.location.href = '/Logout?sessionExpired=true';
                         });
                     }
                 }, 1000);

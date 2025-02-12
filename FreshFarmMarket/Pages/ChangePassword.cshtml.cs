@@ -12,12 +12,14 @@ namespace FreshFarmMarket.Pages
         private readonly UserManager<CustomIdentityUser> _userManager;
         private readonly SignInManager<CustomIdentityUser> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
+        private readonly MyAuthDbContext _dbContext;
 
-        public ChangePasswordModel(UserManager<CustomIdentityUser> userManager, SignInManager<CustomIdentityUser> signInManager, ILogger<ChangePasswordModel> logger)
+        public ChangePasswordModel(UserManager<CustomIdentityUser> userManager, SignInManager<CustomIdentityUser> signInManager, ILogger<ChangePasswordModel> logger, MyAuthDbContext dbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _dbContext = dbContext;
         }
 
         [BindProperty]
@@ -38,15 +40,6 @@ namespace FreshFarmMarket.Pages
         [DataType(DataType.Password)]
         [Compare(nameof(NewPassword), ErrorMessage = "Confirm password does not match.")]
         public string ConfirmPassword { get; set; }
-
-        public bool Expired { get; private set; }
-
-        public async Task<IActionResult> OnGetAsync(bool expired = false)
-        {
-            Expired = expired;
-            _logger.LogInformation("ChangePassword OnGetAsync triggered. Expired: {Expired}", expired);
-            return Page();
-        }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -95,6 +88,18 @@ namespace FreshFarmMarket.Pages
             }
 
             _logger.LogInformation("Password changed successfully for user {UserName}. Signing out and back in.", user.UserName);
+
+            // Add the new password to the PasswordHistory table
+            var passwordHistory = new PasswordHistory
+            {
+                UserId = user.Id,
+                HashedPassword = user.PasswordHash, // Assuming PasswordHash is the hashed password
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _dbContext.PasswordHistories.Add(passwordHistory);
+            await _dbContext.SaveChangesAsync();
+
 
             TempData["SuccessMessage"] = "Password successfully changed!";
             TempData.Keep("SuccessMessage"); // Ensures it persists after redirect

@@ -9,6 +9,7 @@ namespace FreshFarmMarket.Services
     public class CustomUserManager : UserManager<CustomIdentityUser>
     {
         private readonly MyAuthDbContext _dbContext;
+        private readonly ILogger<CustomUserManager> _logger;  
 
         public CustomUserManager(
             MyAuthDbContext dbContext,
@@ -20,36 +21,38 @@ namespace FreshFarmMarket.Services
             ILookupNormalizer keyNormalizer,
             IdentityErrorDescriber errors,
             IServiceProvider services,
-            ILogger<UserManager<CustomIdentityUser>> logger)
+            ILogger<CustomUserManager> logger)
             : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
         {
             _dbContext = dbContext;
+            _logger = logger;
         }
 
-        public async Task<IdentityResult> ChangePasswordWithPolicyAsync(CustomIdentityUser user, string oldPassword, string newPassword)
+        public async Task<IdentityResult> ChangePasswordWithPolicyAsync(CustomIdentityUser identityUser, string oldPassword, string newPassword)
         {
-            if (user == null)
+            if (identityUser == null)
             {
                 return IdentityResult.Failed(new IdentityError { Description = "User cannot be null." });
             }
 
-            // Retrieve User entity from the database
-            var userFromDb = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+            // Retrieve User entity from the database using Email (not UserID)
+            var userFromDb = await _dbContext.Users.OfType<User>().FirstOrDefaultAsync(u => u.Email == identityUser.Email);
             if (userFromDb == null)
             {
                 return IdentityResult.Failed(new IdentityError { Description = "User not found." });
             }
 
-            var identityUser = await _dbContext.Users.OfType<CustomIdentityUser>().FirstOrDefaultAsync(u => u.Email == user.Email) ?? user;
+            _logger.LogInformation("Checking password history for user {UserId}.", userFromDb.UserID);
 
-
-            // Check password history
+            // Check password history using the UserID (Guid) from userFromDb
             var lastTwoPasswords = await _dbContext.PasswordHistories
                 .AsNoTracking()
-                .Where(ph => ph.UserId == user.Id)
+                .Where(ph => ph.UserId == userFromDb.UserID.ToString()) // Compare UserID (Guid converted to string)
                 .OrderByDescending(ph => ph.CreatedAt)
                 .Take(2)
                 .ToListAsync();
+
+            _logger.LogInformation("Found {PasswordCount} passwords in history for user {UserId}.", lastTwoPasswords.Count, userFromDb.UserID);
 
             foreach (var passwordHistory in lastTwoPasswords)
             {
@@ -75,6 +78,8 @@ namespace FreshFarmMarket.Services
             var result = await ChangePasswordAsync(identityUser, oldPassword, newPassword);
             if (result.Succeeded)
             {
+                _logger.LogInformation("Adding new password history for user {UserId} at {Time}.", userFromDb.UserID, DateTime.UtcNow);
+
                 // Update password change timestamp in User entity
                 userFromDb.PasswordLastChanged = DateTime.UtcNow;
                 _dbContext.Entry(userFromDb).Property(u => u.PasswordLastChanged).IsModified = true;
@@ -82,15 +87,18 @@ namespace FreshFarmMarket.Services
                 // Add the new password to the history
                 _dbContext.PasswordHistories.Add(new PasswordHistory
                 {
-                    UserId = identityUser.Id,
+                    UserId = userFromDb.UserID.ToString(),  // Convert UserID (Guid) to string for storage in PasswordHistories
                     HashedPassword = PasswordHasher.HashPassword(identityUser, newPassword),
                     CreatedAt = DateTime.UtcNow
                 });
 
                 await _dbContext.SaveChangesAsync();
+
+        _logger.LogInformation("Password history for user {UserId} saved successfully at {Time}.", userFromDb.UserID, DateTime.UtcNow);
             }
 
             return result;
         }
+
     }
 }
