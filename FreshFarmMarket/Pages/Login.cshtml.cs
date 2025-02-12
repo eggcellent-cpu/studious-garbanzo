@@ -49,33 +49,33 @@ namespace FreshFarmMarket.Pages
 
         public IActionResult OnGet()
         {
-            Console.WriteLine($"User Identity: {HttpContext.User.Identity?.Name}");
-            Console.WriteLine($"User Is Authenticated: {HttpContext.User.Identity?.IsAuthenticated}");
+            _logger.LogInformation($"User Identity: {HttpContext.User.Identity?.Name}");
+            _logger.LogInformation($"User Is Authenticated: {HttpContext.User.Identity?.IsAuthenticated}");
 
             var sessionAuthToken = HttpContext.Session.GetString("AuthToken");
             var cookieAuthToken = Request.Cookies["AuthToken"];
             var sessionExpireTime = HttpContext.Session.GetString("SessionExpireTime");
 
-            // Check if session timeout has occurred
+            // If session expiration time is missing, assume expired
             if (string.IsNullOrEmpty(sessionExpireTime) || DateTime.UtcNow > DateTime.Parse(sessionExpireTime))
             {
-                HttpContext.Session.Clear();
-                Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
-                Response.Cookies.Delete("AuthToken");
-                Response.Cookies.Delete("MyCookieAuth");
+                // Instead of clearing immediately, allow the user to refresh session on activity
                 if (!Request.Path.Value.EndsWith("/Login", StringComparison.OrdinalIgnoreCase))
                 {
+                    TempData["SessionExpired"] = "Your session has expired. Please log in again.";
                     return RedirectToPage("/Login");
                 }
             }
+            else
+            {
+                // Extend session expiration on user activity (e.g., if there's 5 mins left, refresh to 30 mins)
+                HttpContext.Session.SetString("SessionExpireTime", DateTime.UtcNow.AddMinutes(30).ToString());
+            }
 
+            // Validate session and cookie auth tokens (should match)
             if (string.IsNullOrEmpty(sessionAuthToken) || string.IsNullOrEmpty(cookieAuthToken) || sessionAuthToken != cookieAuthToken)
             {
                 HttpContext.Session.Clear();
-                Response.Cookies.Delete(".AspNetCore.Session"); // Delete the session cookie
-                Response.Cookies.Delete("AuthToken");
-                Response.Cookies.Delete("MyCookieAuth");
-
                 if (!Request.Path.Value.EndsWith("/Login", StringComparison.OrdinalIgnoreCase))
                 {
                     return RedirectToPage("/Login");
@@ -85,11 +85,12 @@ namespace FreshFarmMarket.Pages
             return Page();
         }
 
+
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> OnPostAsync()
         {
             _logger.LogInformation($"User Identity Before Login: {HttpContext.User.Identity?.Name}");
-            Console.WriteLine($"User Is Authenticated Before Login: {HttpContext.User.Identity?.IsAuthenticated}");
+            _logger.LogInformation($"User Is Authenticated Before Login: {HttpContext.User.Identity?.IsAuthenticated}");
 
             if (!ModelState.IsValid)
             {
@@ -194,14 +195,6 @@ namespace FreshFarmMarket.Pages
                 {
                     HttpOnly = true,
                     Secure = true,
-                    SameSite = SameSiteMode.Strict,
-                    Expires = DateTime.UtcNow.AddSeconds(30)
-                });
-
-                Response.Cookies.Append("MyCookieAuth", authToken, new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = false,  // Set to false for local development or true for production
                     SameSite = SameSiteMode.Strict,
                     Expires = DateTime.UtcNow.AddSeconds(30)
                 });

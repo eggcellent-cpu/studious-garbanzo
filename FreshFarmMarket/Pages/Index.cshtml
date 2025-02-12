@@ -75,6 +75,7 @@
 </head>
 
 <div class="text-center">
+
     <h1 class="display-4">Welcome to FreshFarmMarket!</h1>
 
     @if (SignInManager.IsSignedIn(User))
@@ -122,7 +123,14 @@
                     </td>
                 </tr>
             </table>
-            <a href="/ChangePassword" class="btn btn-link change-password-link">Change Password</a> 
+            <a href="/ChangePassword" class="btn btn-link change-password-link">Change Password</a>
+            @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+            {
+                <div class="alert alert-success">
+                    @Model.SuccessMessage
+                </div>
+            }
+
 
         </div>
     }
@@ -159,34 +167,62 @@
             var countdownElement = document.getElementById("countdown");
             var sessionExpireModal = new bootstrap.Modal(document.getElementById("sessionExpireModal"));
 
-            // Show modal after 30 seconds
-            setTimeout(function () {
-                sessionExpireModal.show();
+            var sessionTimeout;
+            var countdownInterval;
+            var isModalVisible = false;
 
-                var countdownInterval = setInterval(function () {
+            function resetSessionTimeout() {
+                clearTimeout(sessionTimeout);
+                clearInterval(countdownInterval);
+                countdownElement.textContent = 10; // Reset countdown display
+
+                // Hide modal if it was shown
+                if (isModalVisible) {
+                    sessionExpireModal.hide();
+                    isModalVisible = false;
+                }
+
+                sessionTimeout = setTimeout(function () {
+                    isModalVisible = true;
+                    sessionExpireModal.show();
+                    startCountdown();
+                }, 30000); // Restart session timeout (30 sec)
+            }
+
+            function startCountdown() {
+                var countdownTime = 10;
+                countdownInterval = setInterval(function () {
                     countdownElement.textContent = countdownTime;
                     countdownTime--;
 
                     if (countdownTime < 0) {
                         clearInterval(countdownInterval);
-                        // Clear session and authentication cookies
                         fetch('/Account/ClearSession', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
                             },
                         }).then(() => {
-                            window.location.href = '/Login'; // Redirect to login after countdown
+                            window.location.href = '/Login';
                         });
                     }
                 }, 1000);
-            }, 30000); // Show modal after 30 seconds
+            }
+
+            // Reset timeout on user interaction
+            ["mousemove", "keypress", "click"].forEach(event => {
+                document.addEventListener(event, resetSessionTimeout);
+            });
+
+            // Start initial session timeout
+            resetSessionTimeout();
 
             // Continue session on button click
             document.getElementById("continueSessionButton").addEventListener("click", function () {
                 var modalInstance = bootstrap.Modal.getInstance(document.getElementById("sessionExpireModal"));
                 modalInstance.hide();
-                // Reset session timeout here if needed
+                isModalVisible = false;
+                resetSessionTimeout();
             });
 
             // Log out on button click
@@ -205,17 +241,20 @@
 }
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
         const passwordInput = document.getElementById("userPassword");
         const togglePassword = document.getElementById("togglePassword");
         const passwordEyeIcon = document.getElementById("passwordEyeIcon");
 
-        togglePassword.addEventListener("click", function () {
-            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-            passwordInput.setAttribute("type", type);
-            passwordEyeIcon.classList.toggle("fa-eye");
-            passwordEyeIcon.classList.toggle("fa-eye-slash");
-        });
+        if (togglePassword && passwordInput && passwordEyeIcon) {
+            togglePassword.addEventListener("click", function () {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+                passwordEyeIcon.classList.toggle("fa-eye");
+                passwordEyeIcon.classList.toggle("fa-eye-slash");
+            });
+        }
     });
+
 </script>
 

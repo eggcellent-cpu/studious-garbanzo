@@ -23,6 +23,8 @@ namespace FreshFarmMarket.Pages
         }
 
         public List<User> Users { get; set; } = new List<User>();
+        public string SuccessMessage { get; set; }
+
 
         public async Task<IActionResult> OnGetAsync()
         {
@@ -42,6 +44,11 @@ namespace FreshFarmMarket.Pages
                 PhotoPath = user.PhotoPath,
                 Password = user.Password // If you need to hash passwords, don't decrypt this
             }).ToList();
+
+            if (TempData["SuccessMessage"] != null)
+            {
+                SuccessMessage = TempData["SuccessMessage"].ToString();
+            }
 
             return Page();
         }

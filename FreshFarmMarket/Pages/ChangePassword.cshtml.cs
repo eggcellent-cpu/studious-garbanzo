@@ -3,6 +3,7 @@ using FreshFarmMarket.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace FreshFarmMarket.Pages
 {
@@ -10,33 +11,45 @@ namespace FreshFarmMarket.Pages
     {
         private readonly UserManager<CustomIdentityUser> _userManager;
         private readonly SignInManager<CustomIdentityUser> _signInManager;
-        private readonly ILogger<ChangePasswordModel> _logger;  // Inject ILogger
+        private readonly ILogger<ChangePasswordModel> _logger;
 
         public ChangePasswordModel(UserManager<CustomIdentityUser> userManager, SignInManager<CustomIdentityUser> signInManager, ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _logger = logger;  // Assign the injected logger
+            _logger = logger;
         }
 
         [BindProperty]
+        [Required(ErrorMessage = "Current password is required.")]
+        [DataType(DataType.Password)]
         public string OldPassword { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "New password is required.")]
+        [StringLength(100, ErrorMessage = "Password must be at least {2} characters long.", MinimumLength = 12)]
+        [DataType(DataType.Password)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$",
+            ErrorMessage = "Password must be at least 12 characters long, including an uppercase letter, a lowercase letter, a number, and a special character.")]
         public string NewPassword { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Confirm password is required.")]
+        [DataType(DataType.Password)]
+        [Compare(nameof(NewPassword), ErrorMessage = "Confirm password does not match.")]
+        public string ConfirmPassword { get; set; }
 
         public bool Expired { get; private set; }
 
         public async Task<IActionResult> OnGetAsync(bool expired = false)
         {
             Expired = expired;
-            _logger.LogInformation("ChangePassword OnGetAsync triggered. Expired: {Expired}", expired); // Log when the page is accessed
+            _logger.LogInformation("ChangePassword OnGetAsync triggered. Expired: {Expired}", expired);
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            // Check if the user is authenticated
             if (!User.Identity.IsAuthenticated)
             {
                 _logger.LogWarning("User is not authenticated. Redirecting to Login.");
@@ -54,6 +67,22 @@ namespace FreshFarmMarket.Pages
 
             _logger.LogInformation("User found: {UserName}. Attempting to change password.", user.UserName);
 
+            // Ensure new password is not the same as old password
+            var passwordCheck = await _userManager.CheckPasswordAsync(user, OldPassword);
+            if (!passwordCheck)
+            {
+                _logger.LogError("Incorrect current password for user {UserName}.", user.UserName);
+                ModelState.AddModelError(string.Empty, "Incorrect current password.");
+                return Page();
+            }
+
+            if (OldPassword == NewPassword)
+            {
+                _logger.LogError("New password must be different from the old password for user {UserName}.", user.UserName);
+                ModelState.AddModelError(string.Empty, "New password cannot be the same as the old password.");
+                return Page();
+            }
+
             var result = await _userManager.ChangePasswordAsync(user, OldPassword, NewPassword);
             if (!result.Succeeded)
             {
@@ -65,10 +94,11 @@ namespace FreshFarmMarket.Pages
                 return Page();
             }
 
-            // Log the success of the password change
             _logger.LogInformation("Password changed successfully for user {UserName}. Signing out and back in.", user.UserName);
 
-            // Sign out the user and sign them back in
+            TempData["SuccessMessage"] = "Password successfully changed!";
+            TempData.Keep("SuccessMessage"); // Ensures it persists after redirect
+
             await _signInManager.SignOutAsync();
             await _signInManager.SignInAsync(user, isPersistent: false);
 

@@ -34,7 +34,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/AccessDenied";
         options.Cookie.HttpOnly = true;
         options.Cookie.Name = "MyCookieAuth";
-        options.ExpireTimeSpan = TimeSpan.FromSeconds(30); 
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); 
         options.SlidingExpiration = true; // Reset the expiration time on each request
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Ensure cookies are only sent over HTTPS
         options.Cookie.SameSite = SameSiteMode.Strict; // Prevent CSRF attacks
@@ -58,7 +58,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 // Configure Session
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(30); // Session expires after 30 minutes
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session expires after 30 minutes
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;

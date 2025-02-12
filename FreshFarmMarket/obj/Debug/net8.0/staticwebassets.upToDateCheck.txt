@@ -82,9 +82,12 @@ wwwroot\uploads\aada76ef-70de-463d-b5c0-4de72eecff96.jpg
 wwwroot\uploads\afd92e9c-efd4-4102-8f6d-67acae43021a.jpg
 wwwroot\uploads\b2a80902-1b27-40d1-83ae-b27519df1914.jpg
 wwwroot\uploads\b3ba26fc-0749-4bbc-a1cc-94754fec2883.jpg
+wwwroot\uploads\bc163b27-b0b0-4384-af23-e405f238e6e0.jpg
+wwwroot\uploads\c881bff7-4fd7-4c08-ac50-05666fe62a4e.jpg
 wwwroot\uploads\c90396a7-3bd0-4c91-9574-5a7b7f5067bb.jpg
 wwwroot\uploads\c9e2673b-5991-492f-ae7b-8d262b55e31e.jpg
 wwwroot\uploads\cfd62f3d-a6d2-40ab-9ae6-60422205cb7c.jpg
+wwwroot\uploads\d982b9cf-aedf-42e9-84ca-b3068c802ffa.jpg
 wwwroot\uploads\e106d936-f559-4452-8fbc-b11a47dedb44.jpg
 wwwroot\uploads\ec1312f4-4370-4f95-b40d-c1d8803456ad.jpg
 wwwroot\uploads\ecbe0278-cd37-4115-9771-41bb3eb7648d.jpg

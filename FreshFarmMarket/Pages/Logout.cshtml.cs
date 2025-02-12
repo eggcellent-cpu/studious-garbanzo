@@ -37,8 +37,9 @@ namespace FreshFarmMarket.Pages
                 _logger.LogInformation($"User {userId} logged out.");
             }
 
-            await _signInManager.SignOutAsync(); // Sign out the user
+            await _signInManager.SignOutAsync(); 
             HttpContext.Session.Clear(); // Clear session data
+            TempData.Clear();
 
             // Delete authentication & session cookies
             Response.Cookies.Delete("AuthToken");
