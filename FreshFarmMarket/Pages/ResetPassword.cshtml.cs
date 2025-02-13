@@ -100,7 +100,7 @@ namespace FreshFarmMarket.Pages
                     _logger.LogInformation($"Deleted old passwords for user {user.Id}:");
                     foreach (var ph in passwordsToDelete)
                     {
-                        _logger.LogInformation($"  - {ph.HashedPassword} (Created: {ph.CreatedAt})");
+                        _logger.LogInformation($"  - Password change for user {user.Id} at {ph.CreatedAt}");
                     }
                 }
 
@@ -114,7 +114,7 @@ namespace FreshFarmMarket.Pages
 
                 foreach (var ph in finalPasswordHistories)
                 {
-                    _logger.LogInformation($"  - {ph.HashedPassword} (Created: {ph.CreatedAt})");
+                    _logger.LogInformation($"  - Password change for user {user.Id} at {ph.CreatedAt}");
                 }
 
                 TempData["ResetMessage"] = "Password has been reset successfully.";

@@ -1110,8 +1110,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>28yq9sd61h</Fingerprint>
-      <Integrity>Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU=</Integrity>
+      <Fingerprint>9x5ly5g5yf</Fingerprint>
+      <Integrity>wxgOEutoVESrQREChQ/xGo2/MOVzNI4K2Kgs77SRMvE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\qrcode.js'))</OriginalItemSpec>
