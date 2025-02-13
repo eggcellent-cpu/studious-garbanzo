@@ -76,6 +76,25 @@ namespace FreshFarmMarket.Pages
                 return Page();
             }
 
+            // **Check Password History - Last 2 Passwords**
+            var lastTwoPasswords = _dbContext.PasswordHistories
+                .Where(ph => ph.UserId == user.Id)
+                .OrderByDescending(ph => ph.CreatedAt)
+                .Take(2)
+                .Select(ph => ph.HashedPassword)
+                .ToList();
+
+            foreach (var oldPasswordHash in lastTwoPasswords)
+            {
+                var passwordMatch = _userManager.PasswordHasher.VerifyHashedPassword(user, oldPasswordHash, NewPassword);
+                if (passwordMatch == PasswordVerificationResult.Success)
+                {
+                    _logger.LogError("New password must not match the last two used passwords for user {UserName}.", user.UserName);
+                    ModelState.AddModelError(string.Empty, "You cannot reuse your last two passwords. Please choose a different password.");
+                    return Page();
+                }
+            }
+
             var result = await _userManager.ChangePasswordAsync(user, OldPassword, NewPassword);
             if (!result.Succeeded)
             {
@@ -98,6 +117,19 @@ namespace FreshFarmMarket.Pages
             };
 
             _dbContext.PasswordHistories.Add(passwordHistory);
+
+            // **Ensure only last 2 passwords are kept**
+            var passwordHistoryList = _dbContext.PasswordHistories
+                .Where(ph => ph.UserId == user.Id)
+                .OrderByDescending(ph => ph.CreatedAt)
+                .ToList();
+
+            if (passwordHistoryList.Count > 2)
+            {
+                var passwordsToDelete = passwordHistoryList.Skip(2);
+                _dbContext.PasswordHistories.RemoveRange(passwordsToDelete);
+            }
+
             await _dbContext.SaveChangesAsync();
 
 

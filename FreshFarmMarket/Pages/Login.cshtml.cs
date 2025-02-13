@@ -151,29 +151,6 @@ namespace FreshFarmMarket.Pages
                 }
             }
 
-            //// password age
-            //if (userFromDb.PasswordLastChanged.HasValue)
-            //{
-            //    var passwordAge = DateTime.UtcNow - userFromDb.PasswordLastChanged.Value;
-            //    _logger.LogInformation("Password for user {UserId} was last changed at {LastChanged}. Current password age is {PasswordAge}.", userFromDb.UserID, userFromDb.PasswordLastChanged.Value, passwordAge);
-
-            //    // Enforce minimum password age (e.g., 2 minutes for testing)
-            //    if (passwordAge < TimeSpan.FromMinutes(2))
-            //    {
-            //        _logger.LogWarning("Password for user {UserId} is too young (last changed {LastChanged}), cannot change within 2 minutes.", userFromDb.UserID, userFromDb.PasswordLastChanged.Value);
-            //        ModelState.AddModelError(string.Empty, "You cannot change your password within 2 minutes of the last change.");
-            //        return Page();
-            //    }
-
-            //    // Enforce maximum password age (e.g., 3 minutes for testing)
-            //    if (passwordAge > TimeSpan.FromMinutes(3))
-            //    {
-            //        _logger.LogWarning("Password for user {UserId} has expired (last changed {LastChanged}), expired after 3 minutes.", userFromDb.UserID, userFromDb.PasswordLastChanged.Value);
-            //        ModelState.AddModelError(string.Empty, "Your password has expired. Please change it.");
-            //        return RedirectToPage("/ChangePassword", new { expired = true });
-            //    }
-            //}
-
             // Attempt to sign in the user
             var result = await _signInManager.PasswordSignInAsync(user, LModel.Password, false, lockoutOnFailure: true);
             if (result.Succeeded)
@@ -246,6 +223,8 @@ namespace FreshFarmMarket.Pages
                 return Page();
             }
         }
+
+        
 
         private string GetHash(string input)
         {
