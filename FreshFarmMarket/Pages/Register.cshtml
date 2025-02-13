@@ -139,8 +139,9 @@
         passwordInput.setAttribute("type", type);
 
         // Toggle the eye icon
-        eyeIcon.classList.toggle("bi-eye");
-        eyeIcon.classList.toggle("bi-eye-slash");
+        eyeIcon.classList.toggle("fa-eye");
+        eyeIcon.classList.toggle("fa-eye-slash");
+
     });
 
     // Toggle Confirm Password Visibility
@@ -153,8 +154,9 @@
         confirmPasswordInput.setAttribute("type", type);
 
         // Toggle the eye icon
-        confirmEyeIcon.classList.toggle("bi-eye");
-        confirmEyeIcon.classList.toggle("bi-eye-slash");
+        confirmEyeIcon.classList.toggle("fa-eye");
+        confirmEyeIcon.classList.toggle("fa-eye-slash");
+
     });
 </script>
 
@@ -162,7 +164,7 @@
 
 <script>
     function validatePassword() {
-        const password = document.getElementById("password").value;
+        const password = document.getElementById("passwordInput").value;
         const feedback = document.getElementById("password-feedback");
 
         let score = 0;

@@ -3,6 +3,41 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\middleware\\recaptcha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\middleware\\recaptcha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.PasswordHistories.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,23 +50,8 @@
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.PasswordHistories.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\middleware\\customerrorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,20 +62,12 @@
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\model\\passwordhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\model\\passwordhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\services\\encryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,19 +90,11 @@
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\model\\myauthdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\model\\myauthdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\timel\\source\\repos\\FreshFarmMarket_pp\\FreshFarmMarket\\Migrations\\20250211182919_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\model\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -184,10 +188,6 @@
       "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\viewmodels\\recaptcharesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|c:\\users\\lenovo\\source\\repos\\studious-garbanzo\\freshfarmmarket\\middleware\\recaptcha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD0753A-B664-490A-A8B8-CD4BAD94C24B}|FreshFarmMarket\\FreshFarmMarket.csproj|solutionrelative:freshfarmmarket\\middleware\\recaptcha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
@@ -206,33 +206,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Program.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Program.cs",
               "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Program.cs",
               "RelativeToolTip": "FreshFarmMarket\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T14:24:56.314Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ForgotPassword.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwDUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T07:05:35.355Z",
               "EditorCaption": ""
             },
             {
@@ -241,19 +228,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Index.cshtml",
               "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Index.cshtml",
               "RelativeToolTip": "FreshFarmMarket\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAowH0AAABjAAAAAAAAAA==",
+              "ViewState": "AgIAALwAAAAAAAAAAAAowMMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T15:40:35.822Z"
+              "WhenOpened": "2025-01-26T15:40:35.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\Register.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAqwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T14:10:31.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwFUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T17:31:47.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAYwO4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:05:00.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReCaptcha.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Middleware\\ReCaptcha.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Middleware\\ReCaptcha.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:09:13.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\appsettings.json",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\appsettings.json",
+              "RelativeToolTip": "FreshFarmMarket\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-26T14:23:25.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.PasswordHistories [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.PasswordHistories.sql",
+              "ToolTip": "dbo.PasswordHistories [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-13T11:44:31.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ForgotPassword.cshtml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T07:05:35.355Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAiwHsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T15:00:53.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CustomErrorHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\CustomErrorHandlingMiddleware.cs",
@@ -265,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Services\\EmailSender.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\EmailSender.cs",
@@ -273,12 +361,11 @@
               "RelativeToolTip": "FreshFarmMarket\\Services\\EmailSender.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAcwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T10:54:28.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T10:54:28.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "ResetPassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
@@ -286,21 +373,11 @@
               "RelativeToolTip": "FreshFarmMarket\\Pages\\ResetPassword.cshtml.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T19:55:08.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T19:55:08.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.PasswordHistories.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.PasswordHistories.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FreshFarmAspAuth/True/SqlTable/dbo.PasswordHistories.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-13T02:29:25.382Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Login.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml",
@@ -312,19 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\Login.cshtml.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAASwMEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:05:00.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Shared\\_Layout.cshtml",
@@ -336,31 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChangePassword.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\ChangePassword.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T15:00:53.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\Register.cshtml.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwI4AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T17:31:47.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "PasswordHistory.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Model\\PasswordHistory.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\PasswordHistory.cs",
@@ -372,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ChangePassword.cshtml",
@@ -384,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EncryptionService.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Services\\EncryptionService.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\EncryptionService.cs",
@@ -396,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Index.cshtml.cs",
@@ -408,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CustomUserManager.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Services\\CustomUserManager.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\CustomUserManager.cs",
@@ -420,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\ResetPassword.cshtml",
@@ -432,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Logout.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Logout.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Logout.cshtml.cs",
@@ -444,19 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Register.cshtml",
-              "RelativeToolTip": "FreshFarmMarket\\Pages\\Register.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T14:10:31.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MyAuthDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Model\\MyAuthDbContext.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\MyAuthDbContext.cs",
@@ -468,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "20250211182919_initialcreate.cs",
               "DocumentMoniker": "C:\\Users\\timel\\source\\repos\\FreshFarmMarket_pp\\FreshFarmMarket\\Migrations\\20250211182919_initialcreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\timel\\source\\repos\\FreshFarmMarket_pp\\FreshFarmMarket\\Migrations\\20250211182919_initialcreate.cs",
@@ -479,19 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\appsettings.json",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\appsettings.json",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\appsettings.json",
-              "RelativeToolTip": "FreshFarmMarket\\appsettings.json",
-              "ViewState": "AgIAAAgAAAAAAAAAAABRwBAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-26T14:23:25.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ForgotPassword.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Model\\ForgotPassword.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\ForgotPassword.cs",
@@ -503,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Model\\AuditLog.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Model\\AuditLog.cs",
@@ -515,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "EmailConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\EmailConfiguration.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\EmailConfiguration.cs",
@@ -527,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "404.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\404.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\404.cshtml",
@@ -539,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "404.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\404.cshtml.cs",
@@ -551,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\ViewModels\\Login.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\Login.cs",
@@ -563,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "401.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\401.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\401.cshtml.cs",
@@ -575,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Privacy.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Privacy.cshtml",
@@ -587,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Error.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error.cshtml.cs",
@@ -599,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error.cshtml",
@@ -611,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Privacy.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Privacy.cshtml.cs",
@@ -623,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "400.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\400.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\400.cshtml",
@@ -635,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "401.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\401.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\401.cshtml",
@@ -647,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "403.cshtml",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Pages\\Error\\403.cshtml",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Pages\\Error\\403.cshtml",
@@ -659,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\ViewModels\\Register.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\Register.cs",
@@ -671,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Controllers\\HomeController.cs",
@@ -683,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "20250206113148_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113148_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113148_InitialCreate.cs",
@@ -694,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "20250206113751_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113751_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206113751_InitialCreate.cs",
@@ -705,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "20250206111733_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206111733_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206111733_InitialCreate.cs",
@@ -716,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "AuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Services\\AuditLogService.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\Services\\AuditLogService.cs",
@@ -728,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "20250206103523_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206103523_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\FreshFarmMarket3\\FreshFarmMarket\\Migrations\\20250206103523_InitialCreate.cs",
@@ -739,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "SQLQuery2.sql",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\SQLQuery2.sql",
               "RelativeDocumentMoniker": "SQLQuery2.sql",
@@ -750,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "EncryptionService.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\88dcdeacda668cfecf8627b9b0aa04cfa92808e21f9d7ae02a07df1719903048\\FreshFarmMarket\\Services\\EncryptionService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\88dcdeacda668cfecf8627b9b0aa04cfa92808e21f9d7ae02a07df1719903048\\FreshFarmMarket\\Services\\EncryptionService.cs",
@@ -762,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "ReCaptchaResponse.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\ViewModels\\ReCaptchaResponse.cs",
               "RelativeDocumentMoniker": "FreshFarmMarket\\ViewModels\\ReCaptchaResponse.cs",
@@ -771,18 +788,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T12:10:08.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ReCaptcha.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Middleware\\ReCaptcha.cs",
-              "RelativeDocumentMoniker": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\studious-garbanzo\\FreshFarmMarket\\Middleware\\ReCaptcha.cs",
-              "RelativeToolTip": "FreshFarmMarket\\Middleware\\ReCaptcha.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:09:13.619Z"
             },
             {
               "$type": "Document",

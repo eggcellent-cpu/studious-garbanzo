@@ -126,8 +126,12 @@ namespace FreshFarmMarket.Pages
 
             if (passwordHistoryList.Count > 2)
             {
-                var passwordsToDelete = passwordHistoryList.Skip(2);
+                var passwordsToDelete = _dbContext.PasswordHistories
+                    .Where(ph => ph.UserId == user.Id)
+                    .OrderBy(ph => ph.CreatedAt)
+                    .Take(passwordHistoryList.Count - 2);
                 _dbContext.PasswordHistories.RemoveRange(passwordsToDelete);
+
             }
 
             await _dbContext.SaveChangesAsync();
